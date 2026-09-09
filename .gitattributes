@@ -2,9 +2,10 @@
 *.ts linguist-detectable=true
 *.tsx linguist-detectable=true
 *.css linguist-detectable=true
-*.html linguist-detectable=true
 
-# Ignore build artifacts from language statistics
-dist/** linguist-vendored=true
-node_modules/** linguist-vendored=true
+# Ignore compiled/bundled root files and vendors from language stats
+index.html linguist-vendored=true linguist-generated=true
+404.html linguist-vendored=true linguist-generated=true
+dist/** linguist-vendored=true linguist-generated=true
+node_modules/** linguist-vendored=true linguist-generated=true
 package-lock.json linguist-generated=true

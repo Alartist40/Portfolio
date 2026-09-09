@@ -4,11 +4,11 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "cp template.html index.html && vite",
+    "build": "tsc -b && cp template.html index.html && vite build && cp dist/index.html index.html && cp dist/index.html 404.html",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "npm run build && gh-pages -d dist --dotfiles"
+    "deploy": "npm run build && npx gh-pages -d dist --dotfiles"
   },
   "dependencies": {
     "clsx": "^2.1.1",
