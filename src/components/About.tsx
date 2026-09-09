@@ -10,10 +10,13 @@ interface AboutProps {
     heading: string
     bio1: string
     bio2: string
+    bio3?: string
     designLabel: string
     designSkills: string
     engLabel: string
     engSkills: string
+    hwLabel?: string
+    hwSkills?: string
     stats: Array<{ num: string; label: string }>
   }
 }
@@ -126,14 +129,28 @@ export default function About({ content }: AboutProps) {
               fontSize: 16,
               color: gray,
               lineHeight: '24px',
-              marginBottom: 48,
+              marginBottom: 16,
               transition: 'color 0.4s ease',
             }}
           >
             {content.bio2}
           </p>
+          {content.bio3 && (
+            <p
+              className="font-sans"
+              style={{
+                fontSize: 16,
+                color: gray,
+                lineHeight: '24px',
+                marginBottom: 40,
+                transition: 'color 0.4s ease',
+              }}
+            >
+              {content.bio3}
+            </p>
+          )}
 
-          <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 24, marginTop: 32 }}>
             <div>
               <h4
                 style={{
@@ -149,7 +166,7 @@ export default function About({ content }: AboutProps) {
               </h4>
               <p
                 className="font-sans"
-                style={{ fontSize: 14, color: gray, transition: 'color 0.4s ease' }}
+                style={{ fontSize: 14, color: gray, lineHeight: '20px', transition: 'color 0.4s ease' }}
               >
                 {content.designSkills}
               </p>
@@ -169,11 +186,33 @@ export default function About({ content }: AboutProps) {
               </h4>
               <p
                 className="font-sans"
-                style={{ fontSize: 14, color: gray, transition: 'color 0.4s ease' }}
+                style={{ fontSize: 14, color: gray, lineHeight: '20px', transition: 'color 0.4s ease' }}
               >
                 {content.engSkills}
               </p>
             </div>
+            {content.hwLabel && (
+              <div>
+                <h4
+                  style={{
+                    fontFamily: '"Instrument Serif", Georgia, serif',
+                    fontSize: 20,
+                    fontWeight: 400,
+                    color: ink,
+                    marginBottom: 4,
+                    transition: 'color 0.4s ease',
+                  }}
+                >
+                  {content.hwLabel}
+                </h4>
+                <p
+                  className="font-sans"
+                  style={{ fontSize: 14, color: gray, lineHeight: '20px', transition: 'color 0.4s ease' }}
+                >
+                  {content.hwSkills}
+                </p>
+              </div>
+            )}
           </div>
         </div>
 

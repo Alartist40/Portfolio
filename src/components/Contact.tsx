@@ -143,7 +143,9 @@ export default function Contact({ content }: ContactProps) {
           </a>
           <span style={{ color: 'var(--border)', transition: 'color 0.4s ease' }}>·</span>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/romeroalejandrojapan"
+            target="_blank"
+            rel="noopener noreferrer"
             className="font-sans"
             style={{
               fontSize: 12,
