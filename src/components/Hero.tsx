@@ -21,12 +21,12 @@ function ScrambleLine({
   text: string
   delay: number
 }) {
-  const [display, setDisplay] = useState('')
+  const [display, setDisplay] = useState(text)
   const [done, setDone] = useState(false)
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
   useEffect(() => {
-    setDisplay('')
+    setDisplay(text)
     setDone(false)
     const startTimeout = setTimeout(() => {
       let iteration = 0
