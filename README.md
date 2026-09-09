@@ -1,73 +1,69 @@
-# React + TypeScript + Vite
+# ✦ Romero Alejandro — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **UX Designer & Systems Engineer** · Japan  
+> From interactive UX architectures and pure-Rust AI agent memory to low-RAM LLM inference runtimes and autonomous robotics platforms.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Overview
 
-## React Compiler
+This repository houses the source code for my personal engineering & design portfolio. Built with a focus on typography, fluid animations, dynamic theming, and bilingual localization (English & Japanese).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🛠️ Built With
+- **Language**: TypeScript (100% strict type safety)
+- **Framework**: React 19 + Vite 6
+- **Styling**: Tailwind CSS + Custom CSS Variables
+- **Animations & Interaction**: GSAP (ScrollTrigger), Lenis Smooth Scroll, Three.js (Aurora Shaders)
+- **Routing**: React Router (HashRouter for seamless static & GitHub Pages deployment)
+- **Build Optimization**: Inlined single-file asset bundling via `vite-plugin-singlefile`
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🌟 Flagship Projects Showcased
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. **[Cynapse](https://github.com/Alartist40/cynapse.git)** — High-performance, offline-first AI agent platform in 100% pure Rust. Features the 4-tier Dendrite SQLite FTS5 graph memory, Leafcutter tensor execution core, 3D Orbital Galaxy Atlas, and interactive retro TUI harness.
+2. **[LeafcutterLLM](https://github.com/Alartist40/LeafcutterLLM.git)** — Memory-first adaptive LLM runtime in 100% Rust. Runs 1.5B–70B models on low RAM via 3-tier streaming execution, hardware auto-speccing, SIMD kernels, and OpenAI-compatible REST server.
+3. **[Paraclea](https://github.com/Alartist40/paraclea.git)** — Pure Rust offline AI companion and intelligent librarian engine. Features personalized Dendrite v2 graph memory, 219 Bible translations across 30 languages (all 66 books), 211-chapter offline library, and Reticulum LoRa mesh.
+4. **[The Pathfinder Eye](https://github.com/Alartist40/the-pathfinder-eye)** — Autonomous robotics platform with native Go/Rust brain, omnidirectional mecanum wheels, face recognition security authority, and 30fps YOLO vision.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 💻 Development & Build
+
+### Prerequisites
+- Node.js 18+
+- npm
+
+### Installation
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Run Locally (Dev Server)
+```bash
+npm run dev
+# Open http://localhost:3000
 ```
+
+### Production Build
+```bash
+npm run build
+```
+
+### Preview Production Build
+```bash
+npm run preview
+# Open http://localhost:4173
+```
+
+---
+
+## 🌐 GitHub Pages Deployment
+
+This project uses an automated GitHub Actions workflow (`.github/workflows/deploy.yml`) to build and deploy to GitHub Pages on every push to `main`.
+
+---
+
+## 📄 License
+
+MIT License © 2026 Romero Alejandro

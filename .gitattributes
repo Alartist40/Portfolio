@@ -1,0 +1,10 @@
+# Language detection overrides for GitHub Linguist
+*.ts linguist-detectable=true
+*.tsx linguist-detectable=true
+*.css linguist-detectable=true
+*.html linguist-detectable=true
+
+# Ignore build artifacts from language statistics
+dist/** linguist-vendored=true
+node_modules/** linguist-vendored=true
+package-lock.json linguist-generated=true

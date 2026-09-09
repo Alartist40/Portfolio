@@ -10,6 +10,7 @@ interface WorkProps {
     label: string
     heading: string
     subtext: string
+    viewDetails?: string
     projects: Array<{
       num: string
       title: string
@@ -229,7 +230,7 @@ export default function Work({ content }: WorkProps) {
                   transition: 'color 0.4s ease',
                 }}
               >
-                View details →
+                {content.viewDetails || 'View details →'}
               </span>
             </div>
           </div>
