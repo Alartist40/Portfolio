@@ -11,14 +11,11 @@
     "deploy": "npm run build && npx gh-pages -d dist --dotfiles"
   },
   "dependencies": {
-    "clsx": "^2.1.1",
     "gsap": "^3.12.5",
     "lenis": "^1.1.20",
-    "lucide-react": "^0.475.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router": "^7.1.5",
-    "tailwind-merge": "^3.0.1",
     "three": "^0.173.0"
   },
   "devDependencies": {
