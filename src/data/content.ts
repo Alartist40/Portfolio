@@ -67,22 +67,65 @@ export const content = {
       ],
     },
     about: {
-      label: 'ABOUT',
+      label: 'ABOUT ME',
       heading: 'Bridging design thinking, hardware craft, and deep systems engineering',
-      bio1: 'I am a UX designer who learned to build from the metal up. I identify bottlenecks, design intuitive interfaces and resilient architectures, and ship production-grade code in Rust, Go, and Python. A seasoned leader and educator, I have directed multicultural teams across Africa, Japan, and the Americas, organized week-long community events, and taught hands-on robotics workshops to children and adults alike.',
-      bio2: 'My craft blends design with physical computing: developing custom 3D animations (such as the Dendrite Galactic Memory visualizer), designing bespoke games and UI systems, and building hardware projects on single-board computers (Raspberry Pi 5, Zero 2W, Orange Pi 6 Plus) and microcontrollers (ESP32-S3 Sense, ESP32-C3) alongside self-taught 3D print prototyping and iterative testing.',
-      bio3: 'Fluent in Spanish and English, conversational in Japanese (N3 level). Skilled in Docker, Podman, bare-metal Linux optimization, embedded robotics, and edge AI deployment. Currently based in Japan architecting high-performance intelligent agents and hardware systems.',
-      designLabel: 'DESIGN & CREATIVE',
-      designSkills: 'UI/UX Architecture, 3D & Galactic Animation, Game Design, Figma, Media Production',
-      engLabel: 'SYSTEMS & AI ENGINEERING',
-      engSkills: 'Rust, Go, Python, SIMD Vectorization, Graph Memory (SQLite FTS5), Linux, Docker/Podman',
-      hwLabel: 'HARDWARE & PROTOTYPING',
-      hwSkills: 'Raspberry Pi 5 / Zero 2W, Orange Pi 6 Plus, ESP32-S3 / C3, 3D Print CAD Prototyping',
+      intro1: 'I am a UX designer who learned to build systems from the metal up. I identify workflow bottlenecks, design intuitive user interfaces and resilient architectures, and ship production-grade code in Rust, Go, and Python. Fluent in Spanish and English with conversational Japanese (N3 level), I have led cross-functional teams across Africa, Japan, and the Americas.',
+      intro2: 'Currently based in Japan, I combine low-level hardware prototyping, single-board computing, additive manufacturing, 3D graphic systems, and autonomous AI agents to build complete, functional products from concept to execution.',
+      pillarsHeading: 'AREAS OF EXPERTISE & LEADERSHIP',
+      pillars: [
+        {
+          num: 'PILLAR 01',
+          title: 'Robotics Education & Global Event Leadership',
+          description:
+            'Experienced educator and community leader. Led and taught hands-on robotics and programming classes to children and adults of diverse cultural and ethnic backgrounds across multiple events. Directed and coordinated week-long technical events and multi-continent initiatives.',
+          tags: ['Robotics Teaching', 'Multicultural Education', 'Week-Long Event Management', '3 Continents', 'Team Leadership'],
+        },
+        {
+          num: 'PILLAR 02',
+          title: 'Single-Board Computers & Microcontrollers',
+          description:
+            'Extensive hands-on engineering across single-board computers and microchips: from Raspberry Pi 5 and Pi Zero 2W to Orange Pi 6 Plus and ESP32 chips (ESP32-S3 Sense, ESP32-C3). Proficient in hardware interfacing, low-latency firmware, I2C/SPI protocols, and edge Linux optimization.',
+          tags: ['Raspberry Pi 5', 'Raspberry Pi Zero 2W', 'Orange Pi 6 Plus', 'ESP32-S3 Sense', 'ESP32-C3', 'Embedded Hardware'],
+        },
+        {
+          num: 'PILLAR 03',
+          title: 'Self-Taught 3D Printing & Rapid Prototyping',
+          description:
+            'Self-taught in 3D CAD modeling, slicing, and additive manufacturing. Capable of designing custom robotic chassis, sensor mounting brackets, and custom device enclosures, iteratively testing and refining physical prototypes from raw ideas into functional hardware.',
+          tags: ['3D Printing', 'CAD Design', 'Iterative Prototyping', 'Hardware Fabrication', 'Enclosure Design'],
+        },
+        {
+          num: 'PILLAR 04',
+          title: 'Interactive 3D Systems, Animation & Game Design',
+          description:
+            'Merging visual aesthetics with low-level computation. Engineered interactive 3D visualizers like the Dendrite 3D Orbital Galaxy Memory Atlas in Cynapse, crafted unique modern user interfaces, and combined design architecture with programming logic to develop complete games.',
+          tags: ['3D Galaxy Animation', 'Game Development', 'UX/UI Architecture', 'Figma', 'Interactive Prototyping'],
+        },
+      ],
+      skillsHeading: 'TECHNICAL STACK & METHODOLOGIES',
+      skills: [
+        {
+          category: 'Systems & AI Engineering',
+          items: 'Rust (100% pure cores), Go, Python, SIMD Vectorization, Graph Memory (SQLite FTS5), Linux, Docker, Podman',
+        },
+        {
+          category: 'Hardware & Embedded Computing',
+          items: 'Raspberry Pi 5, Pi Zero 2W, Orange Pi 6 Plus, ESP32-S3 Sense, ESP32-C3, I2C/SPI, Embedded Linux',
+        },
+        {
+          category: 'Physical Prototyping & 3D Fabrication',
+          items: '3D Printing (FDM/Resin), CAD Modeling, Rapid Mechanical Prototyping, Sensor Integration, Chassis Fabrication',
+        },
+        {
+          category: 'Design, Animation & Creative',
+          items: 'UI/UX Architecture, 3D & Galactic Visualization, Game Design, Interactive Prototyping, Video & Media Production',
+        },
+      ],
       stats: [
         { num: '10+', label: 'Projects Built' },
         { num: '3', label: 'Continents Led' },
+        { num: 'SBC & MCU', label: 'Hardware Platforms' },
         { num: '200+', label: 'Passing Tests' },
-        { num: 'SBC & MCU', label: 'Hardware Prototyped' },
       ],
     },
     contact: {
@@ -158,20 +201,63 @@ export const content = {
     about: {
       label: '自己紹介',
       heading: 'デザイン思考、ハードウェア技術、深層システム工学の融合',
-      bio1: '私は、ハードウェアの基盤からシステム全体を構築できるUXデザイナーです。ワークフローの課題を特定し、直感的なUIと堅牢なアーキテクチャを設計し、Rust、Go、Pythonで製品レベルのコードを提供します。アフリカ、日本、アメリカの3大陸で多国籍チームを率い、1週間に及ぶ大規模イベントの企画・運営や、子どもから大人まで多様な人々を対象としたロボティクス教室の指導を行ってきました。',
-      bio2: '私の強みはデザインとハードウェアの融合です。Dendriteの3D銀河記憶ビジュアライザなどの独自アニメーションやUI設計、ゲーム開発に加え、SBC（Raspberry Pi 5、Zero 2W、Orange Pi 6 Plus）やマイコン（ESP32-S3 Sense、ESP32-C3）を用いた電子工作・組み込み開発、独学で習得した3Dプリンターによる迅速な試作・検証を得意としています。',
-      bio3: 'スペイン語と英語はネイティブレベル、日本語は日常会話（JLPT N3レベル）。Docker、Podman、Linux低レイヤー最適化、組み込みロボティクス、エッジAIに精通。現在は日本を拠点に、最先端のAIエージェントとハードウェアシステムの開発に挑んでいます。',
-      designLabel: 'デザイン ＆ クリエイティブ',
-      designSkills: 'UI/UXアーキテクチャ、3D・銀河アニメーション、ゲーム開発、Figma、映像制作',
-      engLabel: 'システム ＆ AIエンジニアリング',
-      engSkills: 'Rust、Go、Python、SIMD最適化、グラフメモリ（SQLite FTS5）、Linux、Docker/Podman',
-      hwLabel: 'ハードウェア ＆ プロトタイピング',
-      hwSkills: 'Raspberry Pi 5 / Zero 2W、Orange Pi 6 Plus、ESP32-S3 / C3、3Dプリント試作・CAD',
+      intro1: '私は、ハードウェアの基盤からシステム全体を構築できるUXデザイナーです。ワークフローの課題を特定し、直感的なUIと堅牢なアーキテクチャを設計し、Rust、Go、Pythonで製品レベルのコードを提供します。スペイン語と英語はネイティブレベル、日本語は日常会話（JLPT N3レベル）。アフリカ、日本、アメリカの3大陸で多国籍チームを率いてきました。',
+      intro2: '現在は日本を拠点に、シングルボードコンピュータ、マイコン、3Dプリンティングによるハードウェア試作、3Dグラフィック・アニメーション、自律型AIエージェントを融合させ、構想から完成まで一貫したプロダクト開発を行っています。',
+      pillarsHeading: '専門領域 ＆ リーダーシップ実績',
+      pillars: [
+        {
+          num: '領域 01',
+          title: 'ロボティクス指導 ＆ 大規模イベント統括',
+          description:
+            '豊富な教育・指導実績。子どもから大人まで多様な国籍・文化背景を持つ生徒を対象に、複数のイベントでロボティクスやプログラミングの実践講座を主導・指導。また、1週間に及ぶ大規模技術イベントの企画・運営や3大陸にわたる多国籍プロジェクトを統括。',
+          tags: ['ロボティクス教室指導', '多国籍・多文化教育', '週間イベント運営', '3大陸統括', 'チームリーダーシップ'],
+        },
+        {
+          num: '領域 02',
+          title: 'シングルボードコンピュータ（SBC）＆ マイコン開発',
+          description:
+            'SBCおよびマイコンにおける豊富な実機開発実績：Raspberry Pi 5、Pi Zero 2W、Orange Pi 6 Plus、ESP32シリーズ（ESP32-S3 Sense、ESP32-C3）。低遅延ファームウェア、I2C/SPI通信、センサー統合、エッジLinux最適化に精通。',
+          tags: ['Raspberry Pi 5', 'Raspberry Pi Zero 2W', 'Orange Pi 6 Plus', 'ESP32-S3 Sense', 'ESP32-C3', '組み込みハードウェア'],
+        },
+        {
+          num: '領域 03',
+          title: '独学による3Dプリンティング ＆ 迅速な試作検証',
+          description:
+            '3D CADモデリングからスライス、3Dプリント製造までを独学で習得。ロボットシャーシ、センサーマウント、専用デバイスケースを自ら設計し、物理的なプロトタイプの迅速な試作と反復検証を実行可能。',
+          tags: ['3Dプリント', 'CAD設計', '反復プロトタイピング', '筐体設計', 'ハードウェア製作'],
+        },
+        {
+          num: '領域 04',
+          title: '対話型3Dシステム、アニメーション ＆ ゲーム開発',
+          description:
+            '視覚表現と低レイヤープログラミングの融合。Cynapse/Dendriteにおける3D軌道銀河メモリアトラスのリアルタイム可視化、独自UIシステムの設計、デザインとプログラミングを融合させたゲーム開発を実現。',
+          tags: ['3D銀河アニメーション', 'ゲーム開発', 'UI/UXアーキテクチャ', 'Figma', 'インタラクティブ試作'],
+        },
+      ],
+      skillsHeading: '技術スタック ＆ 手法',
+      skills: [
+        {
+          category: 'システム ＆ AIエンジニアリング',
+          items: 'Rust（100%純粋コア）、Go、Python、SIMD最適化、グラフメモリ（SQLite FTS5）、Linux、Docker、Podman',
+        },
+        {
+          category: 'ハードウェア ＆ 組み込み開発',
+          items: 'Raspberry Pi 5、Pi Zero 2W、Orange Pi 6 Plus、ESP32-S3 Sense、ESP32-C3、I2C/SPI、組み込みLinux',
+        },
+        {
+          category: '物理プロトタイピング ＆ 3D造形',
+          items: '3Dプリンティング（FDM/光造形）、CADモデリング、迅速な機構試作、センサー統合、筐体製作',
+        },
+        {
+          category: 'デザイン、アニメーション ＆ クリエイティブ',
+          items: 'UI/UXアーキテクチャ、3D・銀河可視化、ゲーム設計、インタラクティブプロトタイピング、映像制作',
+        },
+      ],
       stats: [
         { num: '10+', label: '開発プロジェクト' },
         { num: '3', label: '指導・統括大陸' },
+        { num: 'SBC/MCU', label: 'ハードウェア対応' },
         { num: '200+', label: 'テスト合格' },
-        { num: 'SBC/MCU', label: 'ハードウェア試作' },
       ],
     },
     contact: {
