@@ -10,6 +10,7 @@ interface ContactProps {
     heading: string
     subtext: string
     email: string
+    academicEmail?: string
     github: string
     linkedin: string
   }
@@ -102,22 +103,49 @@ export default function Contact({ content }: ContactProps) {
           {content.subtext}
         </p>
 
-        <a
-          href={`mailto:${content.email}`}
-          style={{
-            fontFamily: '"Instrument Serif", Georgia, serif',
-            fontSize: 'clamp(22px, 2.5vw, 28px)',
-            fontWeight: 400,
-            letterSpacing: '-0.84px',
-            color: accent,
-            textDecoration: 'none',
-            transition: 'color 0.4s ease, text-decoration 0.3s ease',
-          }}
-          onMouseEnter={(e) => (e.currentTarget.style.textDecoration = 'underline')}
-          onMouseLeave={(e) => (e.currentTarget.style.textDecoration = 'none')}
-        >
-          {content.email}
-        </a>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
+          <a
+            href={`mailto:${content.email}`}
+            style={{
+              fontFamily: '"Instrument Serif", Georgia, serif',
+              fontSize: 'clamp(22px, 2.5vw, 28px)',
+              fontWeight: 400,
+              letterSpacing: '-0.84px',
+              color: accent,
+              textDecoration: 'none',
+              transition: 'color 0.4s ease, text-decoration 0.3s ease',
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+            onMouseLeave={(e) => (e.currentTarget.style.textDecoration = 'none')}
+          >
+            {content.email}
+          </a>
+          {content.academicEmail && (
+            <p
+              className="font-sans"
+              style={{
+                fontSize: 13,
+                color: gray,
+                letterSpacing: '0.4px',
+              }}
+            >
+              Academic / School:{' '}
+              <a
+                href={`mailto:${content.academicEmail}`}
+                style={{
+                  color: gray,
+                  textDecoration: 'underline',
+                  textUnderlineOffset: '3px',
+                  transition: 'color 0.3s ease',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = ink)}
+                onMouseLeave={(e) => (e.currentTarget.style.color = gray)}
+              >
+                {content.academicEmail}
+              </a>
+            </p>
+          )}
+        </div>
 
         <div
           className="flex items-center justify-center"
