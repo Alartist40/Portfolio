@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alejandro Garcia Romero — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 11mm 13mm 11mm 13mm;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #F4F1EA;
+      color: #191919;
+      font-family: "Inter", "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 9.5pt;
+      line-height: 1.45;
+      -webkit-font-smoothing: antialiased;
+    }
+    .page {
+      width: 100%;
+      min-height: 275mm;
+      max-height: 275mm;
+      position: relative;
+      page-break-after: always;
+      break-after: page;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+    .page:last-child {
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+    .content-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    h1, h2, h3, h4, .serif {
+      font-family: "Instrument Serif", "Noto Serif JP", Georgia, serif;
+      font-weight: 400;
+      margin: 0;
+      color: #191919;
+    }
+    .mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+    .accent {
+      color: #E06000;
+    }
+    .gray {
+      color: #55524C;
+    }
+    .section-eyebrow {
+      font-size: 8pt;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: #6E6A62;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .card {
+      background: #FFFFFF;
+      border: 1px solid #D8D4CA;
+      border-radius: 9px;
+      padding: 11px 14px;
+      margin-bottom: 9px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .pill {
+      display: inline-block;
+      background: #EDEAE1;
+      border: 1px solid #D5D1C7;
+      border-radius: 12px;
+      padding: 2px 7.5px;
+      font-size: 7pt;
+      color: #44413C;
+      font-weight: 500;
+      margin-right: 4px;
+      margin-top: 3px;
+    }
+    .pill-accent {
+      background: #FDF1E8;
+      border-color: #F0C4A4;
+      color: #B54500;
+      font-weight: 600;
+    }
+    /* Running Page Header & Footer */
+    .page-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 6px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #DFDBD1;
+      font-size: 7.5pt;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #7A756C;
+    }
+    .page-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 6px;
+      margin-top: 8px;
+      border-top: 1px solid #DFDBD1;
+      font-size: 7.2pt;
+      color: #7A756C;
+    }
+    /* Grid Utilities */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 9px;
+    }
+    /* List styles */
+    ul.bullet-list {
+      list-style: none;
+      padding: 0;
+      margin: 4px 0 0 0;
+    }
+    ul.bullet-list li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 4.5px;
+      font-size: 8.4pt;
+      line-height: 1.38;
+      color: #383530;
+    }
+    ul.bullet-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: #E06000;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==================== PAGE 1: COVER & EXECUTIVE PROFILE ==================== -->
+  <div class="page">
+    <div class="page-header">
+      <span>ROMERO ALEJANDRO • PORTFOLIO</span>
+      <span>FORWARD DEPLOYED & SYSTEMS AI ENGINEER</span>
+    </div>
+
+    <div class="content-wrap">
+      <!-- Header / Identity -->
+      <div style="margin-bottom: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <div>
+            <h1 style="font-size: 34pt; line-height: 1.05; letter-spacing: -1px; margin-bottom: 2px;">
+              ROMERO ALEJANDRO
+            </h1>
+            <p style="font-size: 10.5pt; color: #E06000; font-weight: 500; letter-spacing: 0.5px; margin: 0 0 4px 0;">
+              Garcia Romero Alejandro Eduardo ｜ AI Project Development (CCMC)
+            </p>
+          </div>
+          <div style="text-align: right; font-size: 7.8pt; line-height: 1.45; color: #4A463F;">
+            <div><strong>Email:</strong> <span class="mono">c250469@ccg.ac.jp</span></div>
+            <div><strong>Phone:</strong> +81 80 1098 1841</div>
+            <div><strong>Location:</strong> Saitama / Tokyo, Japan</div>
+            <div><strong>GitHub:</strong> github.com/Alartist40</div>
+            <div><strong>Web:</strong> alartist40.github.io/Portfolio</div>
+          </div>
+        </div>
+
+        <div style="margin-top: 8px; padding: 9px 12px; background: #FFFFFF; border-left: 3px solid #E06000; border-radius: 0 6px 6px 0; border-top: 1px solid #D8D4CA; border-right: 1px solid #D8D4CA; border-bottom: 1px solid #D8D4CA;">
+          <h2 style="font-size: 15pt; line-height: 1.2; margin-bottom: 4px; color: #191919;">
+            I design resilient systems and engineer them from the metal up.
+          </h2>
+          <p style="font-size: 8.5pt; color: #4A463F; margin: 0; line-height: 1.42;">
+            From low-overhead Rust LLM streaming runtimes (70B models at 1.1GB RAM) and production healthcare backends (11,133 records migrated) to autonomous robotics and synaptic graph memory. 10+ projects engineered. Based in Japan.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 High-Impact Metrics -->
+      <div class="grid-4" style="margin-bottom: 12px;">
+        
+          <div style="background: #FFFFFF; border: 1px solid #D8D4CA; border-radius: 8px; padding: 8px 10px; text-align: center;">
+            <div class="serif accent" style="font-size: 21pt; line-height: 1; letter-spacing: -0.5px;">11,133</div>
+            <div style="font-size: 6.8pt; letter-spacing: 0.8px; text-transform: uppercase; color: #6E6A62; font-weight: 600; margin-top: 4px;">Records Migrated</div>
+          </div>
+        
+          <div style="background: #FFFFFF; border: 1px solid #D8D4CA; border-radius: 8px; padding: 8px 10px; text-align: center;">
+            <div class="serif accent" style="font-size: 21pt; line-height: 1; letter-spacing: -0.5px;">1.1 GB</div>
+            <div style="font-size: 6.8pt; letter-spacing: 0.8px; text-transform: uppercase; color: #6E6A62; font-weight: 600; margin-top: 4px;">RAM for 70B Model</div>
+          </div>
+        
+          <div style="background: #FFFFFF; border: 1px solid #D8D4CA; border-radius: 8px; padding: 8px 10px; text-align: center;">
+            <div class="serif accent" style="font-size: 21pt; line-height: 1; letter-spacing: -0.5px;">301</div>
+            <div style="font-size: 6.8pt; letter-spacing: 0.8px; text-transform: uppercase; color: #6E6A62; font-weight: 600; margin-top: 4px;">Rust Tests Passed</div>
+          </div>
+        
+          <div style="background: #FFFFFF; border: 1px solid #D8D4CA; border-radius: 8px; padding: 8px 10px; text-align: center;">
+            <div class="serif accent" style="font-size: 21pt; line-height: 1; letter-spacing: -0.5px;">Lv. 63</div>
+            <div style="font-size: 6.8pt; letter-spacing: 0.8px; text-transform: uppercase; color: #6E6A62; font-weight: 600; margin-top: 4px;">SIGNATE Cloud (879+ Ex)</div>
+          </div>
+        
+      </div>
+
+      <!-- Core Focus & Engineering Pillars -->
+      <div>
+        <div class="section-eyebrow">CORE FOCUS & ENGINEERING PILLARS</div>
+        <div class="grid-2" style="gap: 8px;">
+          
+            <div class="card" style="padding: 9px 11px; margin-bottom: 0;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px;">
+                <span class="mono accent" style="font-size: 7.5pt; font-weight: 600;">PILLAR 01</span>
+                <span style="font-size: 7pt; color: #7A756C;">Arch Linux • Rust Multi-Crate</span>
+              </div>
+              <h3 style="font-size: 12pt; line-height: 1.2; margin-bottom: 3px;">Production Systems &amp; Arch Linux Infrastructure</h3>
+              <p style="font-size: 8pt; color: #55524C; line-height: 1.35; margin: 0 0 6px 0;">Operating on Arch Linux as daily driver. Engineered multi-crate pure Rust workspaces, high-concurrency Axum/Tokio web backends, and low-latency background daemons. Demonstrated zero-loss data migration of 11,133 patient records from legacy Access to modern SQLite, containerized with Docker/Podman.</p>
+              <div>
+                <span class="pill">Arch Linux</span><span class="pill">Rust Multi-Crate</span><span class="pill">Docker/Podman</span><span class="pill">Systemd Daemons</span><span class="pill">Zero-Loss Migration</span>
+              </div>
+            </div>
+          
+            <div class="card" style="padding: 9px 11px; margin-bottom: 0;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px;">
+                <span class="mono accent" style="font-size: 7.5pt; font-weight: 600;">PILLAR 02</span>
+                <span style="font-size: 7pt; color: #7A756C;">Robotics Teaching • Multicultural Education</span>
+              </div>
+              <h3 style="font-size: 12pt; line-height: 1.2; margin-bottom: 3px;">Robotics Education &amp; Global Event Leadership</h3>
+              <p style="font-size: 8pt; color: #55524C; line-height: 1.35; margin: 0 0 6px 0;">Experienced educator and community leader. Led and taught hands-on robotics, programming, and maker workshops to children and adults of diverse multicultural backgrounds across multiple events. Directed and coordinated week-long technical events and humanitarian initiatives across 3 continents.</p>
+              <div>
+                <span class="pill">Robotics Teaching</span><span class="pill">Multicultural Education</span><span class="pill">Week-Long Event Management</span><span class="pill">3 Continents</span><span class="pill">Team Leadership</span>
+              </div>
+            </div>
+          
+            <div class="card" style="padding: 9px 11px; margin-bottom: 0;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px;">
+                <span class="mono accent" style="font-size: 7.5pt; font-weight: 600;">PILLAR 03</span>
+                <span style="font-size: 7pt; color: #7A756C;">Raspberry Pi 5 • Raspberry Pi Zero 2W</span>
+              </div>
+              <h3 style="font-size: 12pt; line-height: 1.2; margin-bottom: 3px;">Single-Board Computers &amp; Microcontrollers</h3>
+              <p style="font-size: 8pt; color: #55524C; line-height: 1.35; margin: 0 0 6px 0;">Extensive hands-on engineering across single-board computers and microchips: from Raspberry Pi 5 and Pi Zero 2W to Orange Pi 6 Plus and ESP32 chips (ESP32-S3 Sense, ESP32-C3). Proficient in hardware interfacing, low-latency firmware, I2C/SPI protocols, and edge Linux optimization.</p>
+              <div>
+                <span class="pill">Raspberry Pi 5</span><span class="pill">Raspberry Pi Zero 2W</span><span class="pill">Orange Pi 6 Plus</span><span class="pill">ESP32-S3 Sense</span><span class="pill">ESP32-C3</span><span class="pill">Embedded Hardware</span>
+              </div>
+            </div>
+          
+            <div class="card" style="padding: 9px 11px; margin-bottom: 0;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px;">
+                <span class="mono accent" style="font-size: 7.5pt; font-weight: 600;">PILLAR 04</span>
+                <span style="font-size: 7pt; color: #7A756C;">3D Printing • CAD Design</span>
+              </div>
+              <h3 style="font-size: 12pt; line-height: 1.2; margin-bottom: 3px;">Self-Taught 3D Printing &amp; Rapid Prototyping</h3>
+              <p style="font-size: 8pt; color: #55524C; line-height: 1.35; margin: 0 0 6px 0;">Self-taught in 3D CAD modeling, slicing, and additive manufacturing. Capable of designing custom robotic chassis, sensor mounting brackets, and custom device enclosures, iteratively testing and refining physical prototypes from raw ideas into functional hardware.</p>
+              <div>
+                <span class="pill">3D Printing</span><span class="pill">CAD Design</span><span class="pill">Iterative Prototyping</span><span class="pill">Hardware Fabrication</span><span class="pill">Enclosure Design</span>
+              </div>
+            </div>
+          
+        </div>
+
+        <!-- 5th Pillar full width -->
+        
+          <div class="card" style="padding: 8px 12px; margin-top: 8px; margin-bottom: 0;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+              <span class="mono accent" style="font-size: 7.5pt; font-weight: 600;">PILLAR 05</span>
+              <span style="font-size: 7pt; color: #7A756C;">3D Galaxy Animation • Game Development • UX/UI Architecture</span>
+            </div>
+            <h3 style="font-size: 11.5pt; line-height: 1.2; margin-bottom: 2px;">Interactive 3D Systems, Animation &amp; Game Design</h3>
+            <p style="font-size: 8pt; color: #55524C; line-height: 1.35; margin: 0 0 4px 0;">Merging visual aesthetics with low-level computation. Engineered interactive 3D visualizers like the Dendrite 3D Orbital Galaxy Memory Atlas in Cynapse, crafted unique modern user interfaces, and combined design architecture with programming logic to develop complete games.</p>
+            <div>
+              <span class="pill">3D Galaxy Animation</span><span class="pill">Game Development</span><span class="pill">UX/UI Architecture</span><span class="pill">Figma</span><span class="pill">Interactive Prototyping</span>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Romero Alejandro • c250469@ccg.ac.jp</span>
+      <span>Page 1 of 5</span>
+    </div>
+  </div>
+
+
+  <!-- ==================== PAGE 2: FLAGSHIP PROJECTS I (CYNAPSE, LEAFCUTTER, E&P) ==================== -->
+  <div class="page">
+    <div class="page-header">
+      <span>FLAGSHIP SYSTEMS ARCHITECTURE (PART I)</span>
+      <span>PURE RUST & RESILIENT PRODUCTION</span>
+    </div>
+
+    <div class="content-wrap">
+      <div style="margin-bottom: 8px;">
+        <div class="section-eyebrow">FLAGSHIP SYSTEMS 01 — 03</div>
+        <p style="font-size: 8pt; color: #55524C; margin: 0;">
+          Low-overhead Rust inference runtimes, graph memory, and zero-loss production database modernizations.
+        </p>
+      </div>
+
+      
+          <div class="card" style="padding: 10px 13px; margin-bottom: 8px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+              <span class="mono accent" style="font-size: 7.5pt; font-weight: 600;">PROJECT 01</span>
+              <span style="font-size: 7.5pt; color: #4A463F;" class="mono">https://github.com/Alartist40/cynapse.git</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px;">
+              <h2 style="font-size: 16pt; letter-spacing: -0.4px;">Cynapse</h2>
+            </div>
+            <p style="font-size: 8.2pt; color: #383530; line-height: 1.35; margin: 0 0 6px 0;">
+              High-performance, offline-first AI agent platform engineered in 100% pure Rust. Features the 4-tier Dendrite SQLite FTS5 graph memory, Leafcutter tensor execution core, 3D orbital galaxy visualization, and an interactive retro TUI harness. 301 verified tests passing.
+            </p>
+
+            
+              <div style="background: #F9F8F5; border: 1px solid #E3DFD5; border-radius: 6px; padding: 6px 10px; margin-bottom: 6px;">
+                <div style="font-size: 7pt; letter-spacing: 1px; text-transform: uppercase; color: #7A756C; font-weight: 600; margin-bottom: 3px;">
+                  KEY ARCHITECTURAL HIGHLIGHTS
+                </div>
+                <ul class="bullet-list" style="margin-top: 2px;">
+                  
+                    <li style="font-size: 7.8pt; line-height: 1.32; margin-bottom: 2.5px;">100% Pure Rust Multi-Crate Architecture: Decoupled modular workspace comprising cynapse-harness, cynapse-tui, cynapse-core, cynapse-memory, cynapse-engine, and leafcutter_core for blazing speed and zero memory leaks</li>
+                  
+                    <li style="font-size: 7.8pt; line-height: 1.32; margin-bottom: 2.5px;">Dendrite 4-Tier Synaptic Graph Memory: SQLite FTS5 full-text indexing + BM25 relevance ranking that organically forms neural connections between concepts, sessions, and facts</li>
+                  
+                    <li style="font-size: 7.8pt; line-height: 1.32; margin-bottom: 2.5px;">Unified Hybrid Multi-Engine: Native Leafcutter Rust tensor core for raw GGUF &amp; Safetensors execution combined with Tier-1 llama.cpp / Ollama high-speed streaming</li>
+                  
+                </ul>
+              </div>
+            
+
+            <div style="margin-top: 4px;">
+              <span class="pill pill-accent">Rust</span><span class="pill pill-accent">AI Agent</span><span class="pill pill-accent">Graph Memory</span><span class="pill pill-accent">TUI</span><span class="pill pill-accent">Offline-First</span>
+            </div>
+          </div>
+        
+          <div class="card" style="padding: 10px 13px; margin-bottom: 8px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+              <span class="mono accent" style="font-size: 7.5pt; font-weight: 600;">PROJECT 02</span>
+              <span style="font-size: 7.5pt; color: #4A463F;" class="mono">https://github.com/Alartist40/LeafcutterLLM.git</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px;">
+              <h2 style="font-size: 16pt; letter-spacing: -0.4px;">LeafcutterLLM</h2>
+            </div>
+            <p style="font-size: 8.2pt; color: #383530; line-height: 1.35; margin: 0 0 6px 0;">
+              Memory-first adaptive LLM runtime written entirely in 100% Rust. Runs 1.5B to 70B parameter models on commodity CPUs without discrete GPUs via 3-tier streaming execution, achieving 1.1GB peak RAM on Llama-3.1-70B and 21.6x speedup over AirLLM.
+            </p>
+
+            
+              <div style="background: #F9F8F5; border: 1px solid #E3DFD5; border-radius: 6px; padding: 6px 10px; margin-bottom: 6px;">
+                <div style="font-size: 7pt; letter-spacing: 1px; text-transform: uppercase; color: #7A756C; font-weight: 600; margin-bottom: 3px;">
+                  KEY ARCHITECTURAL HIGHLIGHTS
+                </div>
+                <ul class="bullet-list" style="margin-top: 2px;">
+                  
+                    <li style="font-size: 7.8pt; line-height: 1.32; margin-bottom: 2.5px;">Pure Rust Native Engine: High-efficiency runtime written from scratch in 100% Rust — zero Python, zero CUDA, zero external runtimes</li>
+                  
+                    <li style="font-size: 7.8pt; line-height: 1.32; margin-bottom: 2.5px;">3-Tier Adaptive Memory System: Tier 1 (Full RAM/VRAM cache), Tier 2 (Cached streaming with prefetch), and Tier 3 (Low-RAM streaming using madvise(DONTNEED) layer eviction for tight memory limits)</li>
+                  
+                    <li style="font-size: 7.8pt; line-height: 1.32; margin-bottom: 2.5px;">Validated 1.5B to 70B Model Roster: Verified coherent reasoning on Ornith 1.0 9B/35B MoE, Qwen3.8-27B, Meta-Llama-3.1-70B (40.3GB file executed at 1.1GB peak RAM), Ministral-3B, and Qwen2.5-1.5B</li>
+                  
+                </ul>
+              </div>
+            
+
+            <div style="margin-top: 4px;">
+              <span class="pill pill-accent">Rust</span><span class="pill pill-accent">LLM Engine</span><span class="pill pill-accent">SIMD</span><span class="pill pill-accent">Open Source</span><span class="pill pill-accent">Sub-1GB RAM</span>
+            </div>
+          </div>
+        
+          <div class="card" style="padding: 10px 13px; margin-bottom: 8px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+              <span class="mono accent" style="font-size: 7.5pt; font-weight: 600;">PROJECT 03</span>
+              <span style="font-size: 7.5pt; color: #4A463F;" class="mono">https://github.com/Alartist40</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 3px;">
+              <h2 style="font-size: 16pt; letter-spacing: -0.4px;">E&amp;P Medical Management System</h2>
+            </div>
+            <p style="font-size: 8.2pt; color: #383530; line-height: 1.35; margin: 0 0 6px 0;">
+              Production healthcare practice management platform deployed at E&amp;P Medical Centre in Botswana. Fully replaced a legacy 96MB Microsoft Access database, flawlessly migrating 89 tables and 11,133 patient records to a zero-dependency Rust and SQLite single binary.
+            </p>
+
+            
+              <div style="background: #F9F8F5; border: 1px solid #E3DFD5; border-radius: 6px; padding: 6px 10px; margin-bottom: 6px;">
+                <div style="font-size: 7pt; letter-spacing: 1px; text-transform: uppercase; color: #7A756C; font-weight: 600; margin-bottom: 3px;">
+                  KEY ARCHITECTURAL HIGHLIGHTS
+                </div>
+                <ul class="bullet-list" style="margin-top: 2px;">
+                  
+                    <li style="font-size: 7.8pt; line-height: 1.32; margin-bottom: 2.5px;">Production Pure Rust 1.97+ Web Backend: Built with Axum, Tokio async multi-threaded runtime, and Serde, completely eliminating Python runtime overhead and external daemon dependencies</li>
+                  
+                    <li style="font-size: 7.8pt; line-height: 1.32; margin-bottom: 2.5px;">Flawless Zero-Loss Data Migration Pipeline: Extracted 89 tables and 11,133 relational patient records from legacy 96MB Access database (SURGIC.mdb) into structured, portable JSON datasets and verified relational SQLite tables</li>
+                  
+                    <li style="font-size: 7.8pt; line-height: 1.32; margin-bottom: 2.5px;">Static Rusqlite Storage Core: Inlined zero-dependency SQLite engine (epmed.db) with WAL journal mode, providing instant multi-token patient search with zero latency</li>
+                  
+                </ul>
+              </div>
+            
+
+            <div style="margin-top: 4px;">
+              <span class="pill pill-accent">Rust</span><span class="pill pill-accent">SQLite</span><span class="pill pill-accent">Healthcare Production</span><span class="pill pill-accent">Data Migration</span><span class="pill pill-accent">Axum</span>
+            </div>
+          </div>
+        
+    </div>
+
+    <div class="page-footer">
+      <span>Romero Alejandro • c250469@ccg.ac.jp</span>
+      <span>Page 2 of 5</span>
+    </div>
+  </div>
+
+
+  <!-- ==================== PAGE 3: FLAGSHIP PROJECTS II (PATHFINDER, PARACLEA, MAZZAROTH, HIKARIGO) ==================== -->
+  <div class="page">
+    <div class="page-header">
+      <span>FLAGSHIP SYSTEMS ARCHITECTURE (PART II)</span>
+      <span>ROBOTICS, OFFLINE VAULTS & DISTRIBUTED SYSTEMS</span>
+    </div>
+
+    <div class="content-wrap">
+      <div style="margin-bottom: 8px;">
+        <div class="section-eyebrow">FLAGSHIP SYSTEMS 04 — 07</div>
+        <p style="font-size: 8pt; color: #55524C; margin: 0;">
+          Autonomous robotics, LoRa off-grid mesh, SBC full-text search, and local-first spaced repetition.
+        </p>
+      </div>
+
+      <div class="grid-2" style="gap: 8px;">
+        
+            <div class="card" style="padding: 9px 11px; margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+                  <span class="mono accent" style="font-size: 7.2pt; font-weight: 600;">PROJECT 04</span>
+                  <span style="font-size: 6.8pt; color: #7A756C;" class="mono">Alartist40/the-pathfinder-eye</span>
+                </div>
+                <h3 style="font-size: 13pt; line-height: 1.15; margin-bottom: 3px;">The Pathfinder Eye</h3>
+                <p style="font-size: 7.8pt; color: #383530; line-height: 1.32; margin: 0 0 6px 0;">
+                  Autonomous robotics platform with native Go/Rust brain, omnidirectional mecanum locomotion, face recognition security authority, and real-time YOLO vision at 30fps with multimodal AI reasoning on Raspberry Pi 5.
+                </p>
+
+                
+                  <div style="background: #F9F8F5; border: 1px solid #E3DFD5; border-radius: 5px; padding: 5px 8px; margin-bottom: 6px;">
+                    <ul class="bullet-list" style="margin: 0;">
+                      
+                        <li style="font-size: 7.3pt; line-height: 1.28; margin-bottom: 2px;">Zero-Python Architecture: Fully native Go/Rust stack eliminates Python overhead, reclaiming 400MB RAM and 1.2GB storage</li>
+                      
+                        <li style="font-size: 7.3pt; line-height: 1.28; margin-bottom: 2px;">Cynapse Neural-Link Memory: Graph-based knowledge engine connecting [[People]], [[Roles]], and [[Events]] with bi-directional backlinks</li>
+                      
+                    </ul>
+                  </div>
+                
+              </div>
+
+              <div>
+                <span class="pill">Rust</span><span class="pill">Go</span><span class="pill">Robotics</span><span class="pill">Computer Vision</span><span class="pill">Raspberry Pi 5</span>
+              </div>
+            </div>
+          
+            <div class="card" style="padding: 9px 11px; margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+                  <span class="mono accent" style="font-size: 7.2pt; font-weight: 600;">PROJECT 05</span>
+                  <span style="font-size: 6.8pt; color: #7A756C;" class="mono">Alartist40/paraclea.git</span>
+                </div>
+                <h3 style="font-size: 13pt; line-height: 1.15; margin-bottom: 3px;">Paraclea</h3>
+                <p style="font-size: 7.8pt; color: #383530; line-height: 1.32; margin: 0 0 6px 0;">
+                  Pure Rust offline AI companion and intelligent librarian engine. Features personalized Dendrite v2 knowledge graph memory, 219 Bible translations across 30 languages, 211-chapter spiritual/survival/medical library, and Reticulum LoRa off-grid mesh communications.
+                </p>
+
+                
+                  <div style="background: #F9F8F5; border: 1px solid #E3DFD5; border-radius: 5px; padding: 5px 8px; margin-bottom: 6px;">
+                    <ul class="bullet-list" style="margin: 0;">
+                      
+                        <li style="font-size: 7.3pt; line-height: 1.28; margin-bottom: 2px;">Pure Rust AI Companion &amp; Librarian Architecture: Built entirely in pure Rust for blazing fast offline text search, multi-translation verse comparison, and intelligent recall</li>
+                      
+                        <li style="font-size: 7.3pt; line-height: 1.28; margin-bottom: 2px;">Personalized Librarian AI &amp; SOUL System: Managed by a tiny, adaptive local AI acting as a dedicated librarian with customizable personality profiles (SOUL.md, IDENTITY, TOOLS) that tune to individual communication styles</li>
+                      
+                    </ul>
+                  </div>
+                
+              </div>
+
+              <div>
+                <span class="pill">Rust</span><span class="pill">AI Librarian</span><span class="pill">Knowledge Engine</span><span class="pill">Reticulum Mesh</span>
+              </div>
+            </div>
+          
+            <div class="card" style="padding: 9px 11px; margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+                  <span class="mono accent" style="font-size: 7.2pt; font-weight: 600;">PROJECT 06</span>
+                  <span style="font-size: 6.8pt; color: #7A756C;" class="mono">Alartist40/mazzaroth</span>
+                </div>
+                <h3 style="font-size: 13pt; line-height: 1.15; margin-bottom: 3px;">Mazzaroth</h3>
+                <p style="font-size: 7.8pt; color: #383530; line-height: 1.32; margin: 0 0 6px 0;">
+                  Pure Rust offline digital knowledge vault and source-verified research engine for single-board computers. Delivers sub-millisecond BM25 full-text indexing, offline vector search, 62 countries of geopolitical maps, and an interactive 1,105-node 3D knowledge graph.
+                </p>
+
+                
+                  <div style="background: #F9F8F5; border: 1px solid #E3DFD5; border-radius: 5px; padding: 5px 8px; margin-bottom: 6px;">
+                    <ul class="bullet-list" style="margin: 0;">
+                      
+                        <li style="font-size: 7.3pt; line-height: 1.28; margin-bottom: 2px;">100% Pure Rust Multi-Engine Vault: Single static binary engineered for ultra-low resource single-board computers (Raspberry Pi, Orange Pi) with zero external runtime dependencies</li>
+                      
+                        <li style="font-size: 7.3pt; line-height: 1.28; margin-bottom: 2px;">Sub-Millisecond BM25 Retrieval Engine: Inverted index and lexical scoring running over thousands of historical, medical, and survival source documents without network access</li>
+                      
+                    </ul>
+                  </div>
+                
+              </div>
+
+              <div>
+                <span class="pill">Rust</span><span class="pill">Offline Knowledge Vault</span><span class="pill">BM25 Search</span><span class="pill">3D Graph</span><span class="pill">SBC</span>
+              </div>
+            </div>
+          
+            <div class="card" style="padding: 9px 11px; margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
+                  <span class="mono accent" style="font-size: 7.2pt; font-weight: 600;">PROJECT 07</span>
+                  <span style="font-size: 6.8pt; color: #7A756C;" class="mono">Alartist40/hikarigo</span>
+                </div>
+                <h3 style="font-size: 13pt; line-height: 1.15; margin-bottom: 3px;">Hikarigo</h3>
+                <p style="font-size: 7.8pt; color: #383530; line-height: 1.32; margin: 0 0 6px 0;">
+                  Privacy-first, open-source language learning and cognitive study platform built in Go and clean HTML/CSS. Delivers zero-tracking SM-2 spaced repetition, instant vocabulary recall, and local-first data ownership with sub-10ms response times.
+                </p>
+
+                
+                  <div style="background: #F9F8F5; border: 1px solid #E3DFD5; border-radius: 5px; padding: 5px 8px; margin-bottom: 6px;">
+                    <ul class="bullet-list" style="margin: 0;">
+                      
+                        <li style="font-size: 7.3pt; line-height: 1.28; margin-bottom: 2px;">Clean Go Micro-Service Architecture: High-concurrency backend written in Go, compiling to a tiny single executable with zero external server dependencies</li>
+                      
+                        <li style="font-size: 7.3pt; line-height: 1.28; margin-bottom: 2px;">Privacy-First Local Storage Engine: Zero analytics, zero third-party telemetry, and local-first SQLite persistence storing spaced-repetition study history on the user&#39;s device</li>
+                      
+                    </ul>
+                  </div>
+                
+              </div>
+
+              <div>
+                <span class="pill">Go</span><span class="pill">Privacy-First</span><span class="pill">Educational Platform</span><span class="pill">Spaced Repetition</span><span class="pill">SQLite</span>
+              </div>
+            </div>
+          
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Romero Alejandro • c250469@ccg.ac.jp</span>
+      <span>Page 3 of 5</span>
+    </div>
+  </div>
+
+
+  <!-- ==================== PAGE 4: TECHNICAL SKILLS, TIMELINE & INTERESTS ==================== -->
+  <div class="page">
+    <div class="page-header">
+      <span>EXPERTISE & BACKGROUND</span>
+      <span>SKILLS MATRIX, TIMELINE & PERSPECTIVES</span>
+    </div>
+
+    <div class="content-wrap">
+      <!-- Technical Skills Matrix (6 Balanced Cards in 3x2 Grid) -->
+      <div style="margin-bottom: 10px;">
+        <div class="section-eyebrow">TECHNICAL SKILLS MATRIX</div>
+        <div class="grid-3" style="gap: 8px;">
+          <!-- 1: Systems -->
+          <div class="card" style="padding: 7px 10px; margin-bottom: 0;">
+            <h4 style="font-size: 10.5pt; color: #191919; margin-bottom: 2px;">
+              Systems & Low-Level Architecture
+            </h4>
+            <p style="font-size: 7.6pt; color: #4A463F; line-height: 1.34; margin: 0;">
+              Rust (primary language, 100% pure cores, multi-crate workspaces), Go, C/C++, SIMD (AVX2/NEON), arena memory allocation, zero-dependency single binaries, Arch Linux, Bash, Podman/Docker.
+            </p>
+          </div>
+
+          <!-- 2: Edge AI -->
+          <div class="card" style="padding: 7px 10px; margin-bottom: 0;">
+            <h4 style="font-size: 10.5pt; color: #191919; margin-bottom: 2px;">
+              Edge AI & LLM Inference Runtimes
+            </h4>
+            <p style="font-size: 7.6pt; color: #4A463F; line-height: 1.34; margin: 0;">
+              3-tier adaptive streaming runtime (70B LLM at 1.1GB RAM), GGUF/Safetensors execution, GBNF grammar sampling, SQLite FTS5 synaptic graph memory, BM25 text retrieval, Python (scikit-learn).
+            </p>
+          </div>
+
+          <!-- 3: Hardware & Robotics -->
+          <div class="card" style="padding: 7px 10px; margin-bottom: 0;">
+            <h4 style="font-size: 10.5pt; color: #191919; margin-bottom: 2px;">
+              Hardware & Embedded Robotics
+            </h4>
+            <p style="font-size: 7.6pt; color: #4A463F; line-height: 1.34; margin: 0;">
+              Raspberry Pi 5, Pi Zero 2W, Orange Pi 6 Plus, ESP32-S3/C3, I2C/SPI protocols, mecanum locomotion kinematics, real-time YOLO vision (30fps), 3D CAD modeling & rapid FDM additive prototyping.
+            </p>
+          </div>
+
+          <!-- 4: Web & Production -->
+          <div class="card" style="padding: 7px 10px; margin-bottom: 0;">
+            <h4 style="font-size: 10.5pt; color: #191919; margin-bottom: 2px;">
+              Web Backends & Data Modernization
+            </h4>
+            <p style="font-size: 7.6pt; color: #4A463F; line-height: 1.34; margin: 0;">
+              Axum, Tokio async runtime, Actix-web, embedded SQLite WAL mode, complete zero-loss legacy Access to SQLite migration (89 tables / 11,133 records), HTML5/CSS3, TypeScript/React, Git/CI/CD.
+            </p>
+          </div>
+
+          <!-- 5: Languages -->
+          <div class="card" style="padding: 7px 10px; margin-bottom: 0; background: #FDFBFA; border-color: #E8D3C4;">
+            <h4 style="font-size: 10.5pt; color: #B54500; margin-bottom: 2px;">
+              Language Proficiency (4 Languages)
+            </h4>
+            <p style="font-size: 7.6pt; color: #4A463F; line-height: 1.34; margin: 0;">
+              Spanish (Native speaker), English (Business level / multinational education), Japanese (Conversational / technical coursework / JLPT N2 study), French (Basic study).
+            </p>
+          </div>
+
+          <!-- 6: Credentials & Emergency -->
+          <div class="card" style="padding: 7px 10px; margin-bottom: 0;">
+            <h4 style="font-size: 10.5pt; color: #191919; margin-bottom: 2px;">
+              Certifications & Emergency Training
+            </h4>
+            <p style="font-size: 7.6pt; color: #4A463F; line-height: 1.34; margin: 0;">
+              Generative AI Passport Certified (Oct 2025), Japanese Red Cross First Aid Certified (Tokyo Branch, Apr 2026), SIGNATE Cloud Level 63 (870+ exercises completed), Anthropic Claude 101 Certified.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Academic & Professional Journey Timeline -->
+      <div style="margin-bottom: 10px;">
+        <div class="section-eyebrow">ACADEMIC &amp; PROFESSIONAL JOURNEY</div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          
+            <div class="card" style="padding: 6.5px 11px; margin-bottom: 0; display: flex; align-items: flex-start; gap: 12px;">
+              <div style="min-width: 85px; flex-shrink: 0;">
+                <span class="mono accent" style="font-size: 7.8pt; font-weight: 600;">2025 – 2027</span>
+              </div>
+              <div style="flex: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px;">
+                  <h4 style="font-size: 10.5pt; margin: 0;">Chuo Computer &amp; Communication College (中央情報専門学校)</h4>
+                  <span class="pill" style="font-size: 6.6pt; margin: 0;">Associate Degree / Senmonshi (専門士) in AI Systems</span>
+                </div>
+                <p style="font-size: 7.6pt; color: #4A463F; line-height: 1.32; margin: 0;">
+                  Expected graduation March 31, 2027. Specializing in computer science, low-level inference runtimes, edge robotics, and autonomous agent architectures. Full work visa sponsorship parity under Japanese Immigration Law.
+                </p>
+              </div>
+            </div>
+          
+            <div class="card" style="padding: 6.5px 11px; margin-bottom: 0; display: flex; align-items: flex-start; gap: 12px;">
+              <div style="min-width: 85px; flex-shrink: 0;">
+                <span class="mono accent" style="font-size: 7.8pt; font-weight: 600;">2023 – 2025</span>
+              </div>
+              <div style="flex: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px;">
+                  <h4 style="font-size: 10.5pt; margin: 0;">ISI Language School, Takadanobaba, Tokyo (ISIランゲージスクール 高田馬場校)</h4>
+                  <span class="pill" style="font-size: 6.6pt; margin: 0;">Japanese Language Immersion</span>
+                </div>
+                <p style="font-size: 7.6pt; color: #4A463F; line-height: 1.32; margin: 0;">
+                  Graduated March 2025. Intensive Japanese language training, intercultural communication, and professional conduct.
+                </p>
+              </div>
+            </div>
+          
+            <div class="card" style="padding: 6.5px 11px; margin-bottom: 0; display: flex; align-items: flex-start; gap: 12px;">
+              <div style="min-width: 85px; flex-shrink: 0;">
+                <span class="mono accent" style="font-size: 7.8pt; font-weight: 600;">2020 – 2023</span>
+              </div>
+              <div style="flex: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px;">
+                  <h4 style="font-size: 10.5pt; margin: 0;">Dalian Medical University (大連医科大学, China)</h4>
+                  <span class="pill" style="font-size: 6.6pt; margin: 0;">Clinical Medicine &amp; Physiological Systems</span>
+                </div>
+                <p style="font-size: 7.6pt; color: #4A463F; line-height: 1.32; margin: 0;">
+                  Completed June 2023. Acquired deep clinical intuition in interconnected biological systems, pharmacology, and high-pressure emergency care.
+                </p>
+              </div>
+            </div>
+          
+            <div class="card" style="padding: 6.5px 11px; margin-bottom: 0; display: flex; align-items: flex-start; gap: 12px;">
+              <div style="min-width: 85px; flex-shrink: 0;">
+                <span class="mono accent" style="font-size: 7.8pt; font-weight: 600;">2018 – 2019</span>
+              </div>
+              <div style="flex: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px;">
+                  <h4 style="font-size: 10.5pt; margin: 0;">South Western University (Philippines)</h4>
+                  <span class="pill" style="font-size: 6.6pt; margin: 0;">Pre-Medical Curriculum</span>
+                </div>
+                <p style="font-size: 7.6pt; color: #4A463F; line-height: 1.32; margin: 0;">
+                  Undergraduate pre-medical coursework in Cebu before transferring to Dalian Medical University in 2020.
+                </p>
+              </div>
+            </div>
+          
+            <div class="card" style="padding: 6.5px 11px; margin-bottom: 0; display: flex; align-items: flex-start; gap: 12px;">
+              <div style="min-width: 85px; flex-shrink: 0;">
+                <span class="mono accent" style="font-size: 7.8pt; font-weight: 600;">2014 – 2017</span>
+              </div>
+              <div style="flex: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px;">
+                  <h4 style="font-size: 10.5pt; margin: 0;">Gaborone International School (Botswana)</h4>
+                  <span class="pill" style="font-size: 6.6pt; margin: 0;">Secondary Education Graduate</span>
+                </div>
+                <p style="font-size: 7.6pt; color: #4A463F; line-height: 1.32; margin: 0;">
+                  Multilingual international schooling foundation in Southern Africa.
+                </p>
+              </div>
+            </div>
+          
+            <div class="card" style="padding: 6.5px 11px; margin-bottom: 0; display: flex; align-items: flex-start; gap: 12px;">
+              <div style="min-width: 85px; flex-shrink: 0;">
+                <span class="mono accent" style="font-size: 7.8pt; font-weight: 600;">2018 – 2023</span>
+              </div>
+              <div style="flex: 1;">
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px;">
+                  <h4 style="font-size: 10.5pt; margin: 0;">E&amp;P Medical Centre (Gaborone, Botswana)</h4>
+                  <span class="pill" style="font-size: 6.6pt; margin: 0;">Medical Administration &amp; Core IT Systems Modernizer</span>
+                </div>
+                <p style="font-size: 7.6pt; color: #4A463F; line-height: 1.32; margin: 0;">
+                  Handled clinical reception, triage intake, and spearheaded modernization of clinic infrastructure: successfully migrated 89 tables and 11,133 records from Access to an air-gapped Rust/SQLite single-binary system.
+                </p>
+              </div>
+            </div>
+          
+        </div>
+      </div>
+
+      <!-- Hobbies & Specialized Academic Subjects (Direct from Resume) -->
+      <div class="grid-2" style="gap: 8px;">
+        <div class="card" style="padding: 8px 12px; margin-bottom: 0;">
+          <div style="font-size: 7pt; letter-spacing: 1px; text-transform: uppercase; color: #7A756C; font-weight: 600; margin-bottom: 3px;">
+            PERSONAL PURSUITS & SELF-DISCIPLINE
+          </div>
+          <p style="font-size: 7.8pt; color: #4A463F; line-height: 1.36; margin: 0;">
+            • <strong>Sketching:</strong> Self-taught since high school, continuously honing visual observation and analytical drawing.<br>• <strong>Strength Training:</strong> Daily home training regimens for physical stamina, focus, and self-discipline.<br>• <strong>UI Design:</strong> Rapid interactive prototyping, design systems, and vector logo design in Figma.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 8px 12px; margin-bottom: 0;">
+          <div style="font-size: 7pt; letter-spacing: 1px; text-transform: uppercase; color: #7A756C; font-weight: 600; margin-bottom: 3px;">
+            SPECIALIZED ACADEMIC SUBJECTS
+          </div>
+          <p style="font-size: 7.8pt; color: #4A463F; line-height: 1.36; margin: 0;">
+            • <strong>AI Project Development:</strong> Full-cycle implementation of edge LLM streaming runtimes and autonomous agents.<br>• <strong>Computer Science:</strong> Memory layout, arena allocation, SIMD parallelism, zero-cost abstractions.<br>• <strong>Algorithms & Data Structures:</strong> Graph traversal, SQLite FTS5 BM25 search, associative memory.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Romero Alejandro • c250469@ccg.ac.jp</span>
+      <span>Page 4 of 5</span>
+    </div>
+  </div>
+
+
+  <!-- ==================== PAGE 5: COMPLETE VOLUNTEER & HUMANITARIAN LEADERSHIP ==================== -->
+  <div class="page">
+    <div class="page-header">
+      <span>LEADERSHIP & GLOBAL IMPACT</span>
+      <span>VOLUNTEER & HUMANITARIAN RECORD</span>
+    </div>
+
+    <div class="content-wrap">
+      <div style="margin-bottom: 10px;">
+        <div class="section-eyebrow">VOLUNTEER &amp; HUMANITARIAN LEADERSHIP</div>
+        <p style="font-size: 8.4pt; color: #55524C; margin: 0; line-height: 1.38;">
+          Over a decade of hands-on youth technology education, international camp operations, and overseas medical triage and surgical support across 3 continents.
+        </p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 9px;">
+        
+          <div class="card" style="padding: 11px 15px; margin-bottom: 0;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #E06000; flex-shrink: 0;"></span>
+              <h3 style="font-size: 13pt; line-height: 1.2;">Community &amp; Educational Leadership in Japan (Tokyo International Church &amp; Beyond / 2025–2026)</h3>
+            </div>
+            <ul class="bullet-list" style="margin-top: 4px;">
+              
+                <li style="font-size: 8.3pt; line-height: 1.4; margin-bottom: 4.5px;">Planned and instructed classes in crafts, survival skills, filmmaking, programming, and robotics for children and adults</li>
+              
+                <li style="font-size: 8.3pt; line-height: 1.4; margin-bottom: 4.5px;">Managed event planning and operations, youth camp coordination, and safety management</li>
+              
+                <li style="font-size: 8.3pt; line-height: 1.4; margin-bottom: 4.5px;">Directed media and public relations: designed posters, video thumbnails, and website architecture</li>
+              
+                <li style="font-size: 8.3pt; line-height: 1.4; margin-bottom: 4.5px;">Served as a bilingual English-Japanese interpreter supporting multi-generational and international community activities</li>
+              
+            </ul>
+          </div>
+        
+          <div class="card" style="padding: 11px 15px; margin-bottom: 0;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #E06000; flex-shrink: 0;"></span>
+              <h3 style="font-size: 13pt; line-height: 1.2;">Technical &amp; Engineering Leadership (CCMC / 2025–2026)</h3>
+            </div>
+            <ul class="bullet-list" style="margin-top: 4px;">
+              
+                <li style="font-size: 8.3pt; line-height: 1.4; margin-bottom: 4.5px;">Led robotics architectural strategy and design decisions for the robotics development team at Chuo Computer &amp; Communication College (CCMC)</li>
+              
+                <li style="font-size: 8.3pt; line-height: 1.4; margin-bottom: 4.5px;">Supported and consulted on robotics manufacturing and coding projects across classes and departments</li>
+              
+                <li style="font-size: 8.3pt; line-height: 1.4; margin-bottom: 4.5px;">Mentored classmates in software development workflows, tooling, and low-level engineering</li>
+              
+            </ul>
+          </div>
+        
+          <div class="card" style="padding: 11px 15px; margin-bottom: 0;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+              <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #E06000; flex-shrink: 0;"></span>
+              <h3 style="font-size: 13pt; line-height: 1.2;">Global Medical &amp; Community Outreach (Botswana &amp; Philippines / 2015, 2018–2019)</h3>
+            </div>
+            <ul class="bullet-list" style="margin-top: 4px;">
+              
+                <li style="font-size: 8.3pt; line-height: 1.4; margin-bottom: 4.5px;">Botswana (2015): Accompanied multidisciplinary medical team at age 15; conducted health checkups for 100+ community members including blood pressure, pulse, and ABO/Rh blood typing</li>
+              
+                <li style="font-size: 8.3pt; line-height: 1.4; margin-bottom: 4.5px;">Leyte Island, Philippines (2018–2019): Trekked 6+ hours through mountainous terrain to deliver essential medicine to remote indigenous settlements; supported field consultations and care as part of medical team</li>
+              
+                <li style="font-size: 8.3pt; line-height: 1.4; margin-bottom: 4.5px;">Mindanao, Philippines (2018–2019): Supported medical triage, vital sign monitoring, and diagnostic blood typing as part of mobile healthcare team</li>
+              
+                <li style="font-size: 8.3pt; line-height: 1.4; margin-bottom: 4.5px;">Philippines (2018–2019): Clinical assistance in surgical suturing, wound dressing/gauze management, and circumcision surgical support (German and Philippine methods)</li>
+              
+                <li style="font-size: 8.3pt; line-height: 1.4; margin-bottom: 4.5px;">Cebu, Philippines (2018–2019): Environmental cleanup and community beautification initiatives</li>
+              
+            </ul>
+          </div>
+        
+      </div>
+
+      <!-- Leadership & Humanitarian Philosophy Card -->
+      <div class="card" style="padding: 10px 14px; margin-top: 9px; margin-bottom: 0; background: #FAF9F6; border-left: 3px solid #E06000;">
+        <div style="font-size: 7.2pt; letter-spacing: 1px; text-transform: uppercase; color: #E06000; font-weight: 600; margin-bottom: 3px;">
+          HUMANITARIAN PHILOSOPHY & FIELD ADAPTABILITY
+        </div>
+        <p style="font-size: 8pt; color: #4A463F; line-height: 1.38; margin: 0;">
+          From clinical triage in Botswana at age 15 to 6-hour mountain treks delivering medicine to remote Philippine tribes, these experiences forged extreme resilience, emergency calm, and deep cross-cultural adaptability. Combined with bilingual interpreting and hands-on technology education across Japan, these humanitarian foundations drive my commitment to engineering systems that genuinely protect, serve, and empower communities worldwide.
+        </p>
+      </div>
+
+      <!-- Contact Ribbon Callout -->
+      <div style="margin-top: 9px; background: #FFFFFF; border: 1px solid #D8D4CA; border-radius: 8px; padding: 10px 14px; display: flex; justify-content: space-between; align-items: center;">
+        <div>
+          <div class="serif" style="font-size: 14pt; line-height: 1.2;">
+            Inquiries, Engineering Roles & Collaborations
+          </div>
+          <div style="font-size: 7.8pt; color: #6E6A62; margin-top: 2px;">
+            Systems engineering, low-level Rust, LLM streaming engines, and robotics.
+          </div>
+        </div>
+        <div style="text-align: right; font-size: 8pt; line-height: 1.4;">
+          <div><strong class="mono accent">c250469@ccg.ac.jp</strong></div>
+          <div class="mono" style="color: #4A463F;">https://alartist40.github.io/Portfolio/</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Romero Alejandro • c250469@ccg.ac.jp</span>
+      <span>Page 5 of 5</span>
+    </div>
+  </div>
+
+</body>
+</html>
