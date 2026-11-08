@@ -1,5 +1,17 @@
 export type Language = 'en' | 'jp'
 
+export interface VolunteerCategory {
+  category: string
+  items: string[]
+}
+
+export interface TimelineItem {
+  period: string
+  title: string
+  role: string
+  desc: string
+}
+
 export interface ProjectDetail {
   architecture: string[]
   stack: { category: string; items: string }[]
@@ -94,7 +106,7 @@ export const content = {
       label: 'ABOUT ME',
       heading: 'Bridging design thinking, hardware craft, and deep systems engineering',
       intro1:
-        'I am a Forward Deployed & Systems AI Engineer who builds mission-critical systems from the metal up. I identify workflow bottlenecks in real-world environments, architect resilient software and low-latency runtimes, and ship production-grade code in Rust, Go, and Python. Fluent in Spanish and English with conversational Japanese (JLPT N3 level), I have led cross-functional technical initiatives and humanitarian missions across Africa, Japan, and the Americas.',
+        'I am a Forward Deployed & Systems AI Engineer who builds mission-critical systems from the metal up. I identify workflow bottlenecks in real-world environments, architect resilient software and low-latency runtimes, and ship production-grade code in Rust, Go, and Python. Fluent in Spanish and English with conversational Japanese, I have led cross-functional technical initiatives and humanitarian missions across Africa, Japan, and the Americas.',
       intro2:
         'Currently based in Japan (completing an AI Systems Diploma at Chuo Computer & Communication College in March 2027), I combine high-performance systems engineering, single-board computers (Raspberry Pi / Orange Pi / ESP32), additive manufacturing (3D CAD prototyping), and offline-first autonomous AI agents to build complete, functional products from concept to production deployment.',
       pillarsHeading: 'AREAS OF EXPERTISE & LEADERSHIP',
@@ -151,7 +163,7 @@ export const content = {
         },
         {
           category: 'Spoken Languages & Human Leadership',
-          items: 'Spanish (Native), English (Native / Fluent), Japanese (Conversational / JLPT N3), French (Basic), Japanese Sign Language (JSL student), Japanese Red Cross First Aid Certified (赤十字救急法短期講習修了)',
+          items: 'Spanish (Native), English (Business Level), Japanese (Conversational / studying for JLPT N2), French (Basic study), Japanese Red Cross First Aid Certified (赤十字救急法短期講習修了)',
         },
       ],
       stats: [
@@ -160,13 +172,82 @@ export const content = {
         { num: '301', label: 'Rust Tests Passed' },
         { num: 'Lv. 63', label: 'SIGNATE Cloud (879+ Ex)' },
       ],
+      timelineHeading: 'ACADEMIC & PROFESSIONAL JOURNEY',
+      timeline: [
+        {
+          period: '2025 – 2027',
+          title: 'Chuo Computer & Communication College (中央情報専門学校)',
+          role: 'Associate Degree / Senmonshi (専門士) in AI Systems',
+          desc: 'Expected graduation March 31, 2027. Specializing in computer science, low-level inference runtimes, edge robotics, and autonomous agent architectures. Full work visa sponsorship parity under Japanese Immigration Law.',
+        },
+        {
+          period: '2023 – 2025',
+          title: 'ISI Language School, Takadanobaba, Tokyo (ISIランゲージスクール 高田馬場校)',
+          role: 'Japanese Language Immersion',
+          desc: 'Graduated March 2025. Intensive Japanese language training, intercultural communication, and professional conduct.',
+        },
+        {
+          period: '2020 – 2023',
+          title: 'Dalian Medical University (大連医科大学, China)',
+          role: 'Clinical Medicine & Physiological Systems',
+          desc: 'Completed June 2023. Acquired deep clinical intuition in interconnected biological systems, pharmacology, and high-pressure emergency care.',
+        },
+        {
+          period: '2018 – 2019',
+          title: 'South Western University (Philippines)',
+          role: 'Pre-Medical Curriculum',
+          desc: 'Undergraduate pre-medical coursework in Cebu before transferring to Dalian Medical University in 2020.',
+        },
+        {
+          period: '2014 – 2017',
+          title: 'Gaborone International School (Botswana)',
+          role: 'Secondary Education Graduate',
+          desc: 'Multilingual international schooling foundation in Southern Africa.',
+        },
+        {
+          period: '2018 – 2023',
+          title: 'E&P Medical Centre (Gaborone, Botswana)',
+          role: 'Medical Administration & Core IT Systems Modernizer',
+          desc: 'Handled clinical reception, triage intake, and spearheaded modernization of clinic infrastructure: successfully migrated 89 tables and 11,133 records from Access to an air-gapped Rust/SQLite single-binary system.',
+        },
+      ],
+      volunteerHeading: 'VOLUNTEER & HUMANITARIAN LEADERSHIP',
+      volunteerSubtext: 'Over a decade of hands-on youth technology education, international camp operations, and overseas medical triage and surgical support across 3 continents.',
+      volunteerCategories: [
+        {
+          category: 'Community & Educational Leadership in Japan (Tokyo International Church & Beyond / 2025–2026)',
+          items: [
+            'Planned and instructed classes in crafts, survival skills, filmmaking, programming, and robotics for children and adults',
+            'Managed event planning and operations, youth camp coordination, and safety management',
+            'Directed media and public relations: designed posters, video thumbnails, and website architecture',
+            'Served as a bilingual English-Japanese interpreter supporting multi-generational and international community activities',
+          ],
+        },
+        {
+          category: 'Technical & Engineering Leadership (CCMC / 2025–2026)',
+          items: [
+            'Led robotics architectural strategy and design decisions for the robotics development team at Chuo Computer & Communication College (CCMC)',
+            'Supported and consulted on robotics manufacturing and coding projects across classes and departments',
+            'Mentored classmates in software development workflows, tooling, and low-level engineering',
+          ],
+        },
+        {
+          category: 'Global Medical & Community Outreach (Botswana & Philippines / 2015, 2018–2019)',
+          items: [
+            'Botswana (2015): Accompanied multidisciplinary medical team at age 15; conducted health checkups for 100+ community members including blood pressure, pulse, and ABO/Rh blood typing',
+            'Leyte Island, Philippines (2018–2019): Trekked 6+ hours through mountainous terrain to deliver essential medicine to remote indigenous settlements; supported field consultations and care as part of medical team',
+            'Mindanao, Philippines (2018–2019): Supported medical triage, vital sign monitoring, and diagnostic blood typing as part of mobile healthcare team',
+            'Philippines (2018–2019): Clinical assistance in surgical suturing, wound dressing/gauze management, and circumcision surgical support (German and Philippine methods)',
+            'Cebu, Philippines (2018–2019): Environmental cleanup and community beautification initiatives',
+          ],
+        },
+      ],
     },
     contact: {
       label: 'CONTACT',
       heading: "Let's engineer something extraordinary.",
       subtext: 'Open to Forward Deployed Engineering, AI Systems, Backend, and Robotics opportunities in Japan.',
-      email: 'alartist40@gmail.com',
-      academicEmail: 'c250469@ccg.ac.jp',
+      email: 'c250469@ccg.ac.jp',
       github: 'GitHub',
       linkedin: 'LinkedIn',
     },
@@ -260,7 +341,7 @@ export const content = {
       label: '自己紹介',
       heading: 'デザイン思考、ハードウェア技術、深層システム工学の融合',
       intro1:
-        '私は、現場の泥臭い課題からハードウェアの基盤まで一貫して構築できるフォワードデプロイド（FDE）＆ システムAIエンジニアです。業務現場のボトルネックを特定し、耐障害性の高いアーキテクチャや低遅延ランタイムを自ら設計し、Rust、Go、Pythonで実運用レベルのコードを提供します。スペイン語と英語はネイティブ、日本語は日常会話（JLPT N3レベル）。アフリカ、日本、アメリカの3大陸で多国籍チームや人道支援プロジェクトを率いてきました。',
+        '私は、現場の泥臭い課題からハードウェアの基盤まで一貫して構築できるフォワードデプロイド（FDE）＆ システムAIエンジニアです。業務現場のボトルネックを特定し、耐障害性の高いアーキテクチャや低遅延ランタイムを自ら設計し、Rust、Go、Pythonで実運用レベルのコードを提供します。スペイン語と英語はネイティブ、日本語は日常会話レベル。アフリカ、日本、アメリカの3大陸で多国籍チームや人道支援プロジェクトを率いてきました。',
       intro2:
         '現在は日本を拠点に活動中（中央情報専門学校 AIプロジェクト学科にて2027年3月に「専門士」取得見込）。シングルボードコンピュータ（Raspberry Pi / Orange Pi / ESP32）、3Dプリンティングによる機構試作、完全閉域で自律稼働するAIエージェント、高並行Webバックエンドを融合させ、構想から現場本番稼働まで一貫したプロダクト開発を行っています。',
       pillarsHeading: '専門領域 ＆ リーダーシップ実績',
@@ -317,7 +398,7 @@ export const content = {
         },
         {
           category: '言語能力 ＆ 対人コミュニケーション',
-          items: 'スペイン語（母語）、英語（ネイティブ・流暢）、日本語（日常会話 / JLPT N3相当）、フランス語（基礎）、日本手話（JSL学習中）、日本赤十字社救急法短期講習修了（東京都支部）',
+          items: 'スペイン語（母語・ネイティブ）、英語（ビジネスレベル）、日本語（日常会話／日本語能力試験N2取得に向けて学習中）、フランス語（基礎学習中）、日本赤十字社救急法短期講習修了（東京都支部）',
         },
       ],
       stats: [
@@ -326,13 +407,82 @@ export const content = {
         { num: '301件', label: 'テスト全件合格' },
         { num: 'Lv. 63', label: 'SIGNATE Cloud (879演習)' },
       ],
+      timelineHeading: '学歴・経歴・資格年表',
+      timeline: [
+        {
+          period: '2025年 – 2027年',
+          title: '中央情報専門学校（CCMC）',
+          role: 'AIプロジェクト学科（専門士取得見込）',
+          desc: '2027年3月31日卒業見込。AI・コンピュータサイエンス、低レイヤ推論基盤、組込みロボティクスを専攻。出入国在留管理局の就労ビザ要件を満たす。',
+        },
+        {
+          period: '2023年 – 2025年',
+          title: 'ISIランゲージスクール 高田馬場校',
+          role: '日本語本科 卒業',
+          desc: '2025年3月卒業。日本語運用力、異文化コミュニケーション、ビジネス習慣を習得。',
+        },
+        {
+          period: '2020年 – 2023年',
+          title: '大連医科大学 / Dalian Medical University（中国）',
+          role: '臨床医学・人体生理機能 修了',
+          desc: '2023年6月修了。有機的な人体系・薬理相互作用・過酷な医療現場における防御的思考の基礎を確立。',
+        },
+        {
+          period: '2018年 – 2019年',
+          title: 'South Western University（フィリピン・セブ）',
+          role: '医学進学課程（中途退学）',
+          desc: '大連医科大学への進学のため中途退学。',
+        },
+        {
+          period: '2014年 – 2017年',
+          title: 'Gaborone International School（ボツワナ）',
+          role: '中等教育 卒業',
+          desc: 'ボツワナ共和国における多国籍・英語環境での教育基盤。',
+        },
+        {
+          period: '2018年 – 2023年',
+          title: 'E&P Medical Centre（ボツワナ）',
+          role: '医療事務・受付、後にWeb開発・基幹IT業務システム刷新担当',
+          desc: '日々の受付・トリアージ業務に加え、89テーブル・11,133件の患者データをAccessから完全移行し、Rust製単一バイナリシステムを本番稼働。',
+        },
+      ],
+      volunteerHeading: 'ボランティア・社会活動実績',
+      volunteerSubtext: '日本国内での青少年向け技術・工作指導から、海外での医療チーム帯同・救急処置支援まで、10年以上にわたる現場実践と社会貢献実績。',
+      volunteerCategories: [
+        {
+          category: '日本での活動（東京インターナショナルチャーチ ほか／2025年〜2026年）',
+          items: [
+            '子どもから大人までを対象に、工作、サバイバルスキル、映像制作、プログラミング、ロボティクスの授業を企画・指導',
+            'イベントの企画・運営、キャンプの運営と安全管理を担当',
+            'ポスター、動画サムネイル、ウェブサイトの制作など、広報・メディア面を担当',
+            '英語と日本語の通訳として、子どもと大人の活動を支援',
+          ],
+        },
+        {
+          category: '技術・リーダーシップ面の活動（2025年〜2026年）',
+          items: [
+            '学校（中央情報専門学校）のロボット開発チームで、ロボットの設計方針をまとめる役割を担当',
+            '他のクラスや学校のロボット制作プロジェクトを支援',
+            'クラスメイトにソフトウェア開発やツールの使い方を教え、制作を後押し',
+          ],
+        },
+        {
+          category: '海外での医療・地域支援',
+          items: [
+            'ボツワナ（2015年）：15歳のとき、医師・看護師など多職種の医療チームに帯同。血圧・脈拍の計測、血液型（ABO型・Rh型）検査を含む健康診断を100名以上に実施',
+            'フィリピン・レイテ島（2018年〜2019年）：先住民の集落へ医薬品を届けるため、6時間以上の徒歩移動と山登りを行い、医療チームの一員として健康診断と処置のサポートを実施',
+            'フィリピン・ミンダナオ島（2018年〜2019年）：医療チームの一員として、血圧・脈拍計測、血液型検査などの健康診断補助を実施',
+            'フィリピン（2018年〜2019年）：縫合処置、ガーゼ交換・包帯処置、および割礼処置（ドイツ式・フィリピン式）のサポートを担当',
+            'フィリピン・セブ島（2018年〜2019年）：地域の清掃活動に参加',
+          ],
+        },
+      ],
     },
     contact: {
       label: '連絡先',
       heading: '現場を動かす確かなシステムを、共に創り出しましょう。',
       subtext: '日本国内でのFDE（AIソリューション）、システム開発、バックエンド、ロボティクス領域の機会を歓迎します。',
-      email: 'alartist40@gmail.com',
-      academicEmail: 'c250469@ccg.ac.jp',
+      email: 'c250469@ccg.ac.jp',
       github: 'GitHub',
       linkedin: 'LinkedIn',
     },

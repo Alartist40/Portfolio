@@ -11,6 +11,18 @@ export interface AboutPillar {
   tags: string[]
 }
 
+export interface TimelineItem {
+  period: string
+  title: string
+  role: string
+  desc: string
+}
+
+export interface VolunteerCategory {
+  category: string
+  items: string[]
+}
+
 interface AboutProps {
   content: {
     label: string
@@ -22,6 +34,11 @@ interface AboutProps {
     skillsHeading: string
     skills: Array<{ category: string; items: string }>
     stats: Array<{ num: string; label: string }>
+    timelineHeading?: string
+    timeline?: TimelineItem[]
+    volunteerHeading?: string
+    volunteerSubtext?: string
+    volunteerCategories?: VolunteerCategory[]
   }
 }
 
@@ -325,7 +342,7 @@ export default function About({ content }: AboutProps) {
       </div>
 
       {/* Categorized Skills Section */}
-      <div>
+      <div style={{ marginBottom: 80 }}>
         <p
           className="font-sans"
           style={{
@@ -380,6 +397,236 @@ export default function About({ content }: AboutProps) {
           ))}
         </div>
       </div>
+
+      {/* Academic & Professional Journey Timeline */}
+      {content.timeline && content.timeline.length > 0 && (
+        <div style={{ marginBottom: 80 }}>
+          <p
+            className="font-sans"
+            style={{
+              fontSize: 12,
+              letterSpacing: '1.32px',
+              textTransform: 'uppercase',
+              color: gray,
+              fontWeight: 400,
+              marginBottom: 28,
+              transition: 'color 0.4s ease',
+            }}
+          >
+            {content.timelineHeading || 'ACADEMIC & PROFESSIONAL JOURNEY'}
+          </p>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 520px), 1fr))',
+              gap: 20,
+            }}
+          >
+            {content.timeline.map((item, i) => (
+              <div
+                key={i}
+                className="timeline-card"
+                style={{
+                  background: cardBg,
+                  backdropFilter: 'blur(16px)',
+                  WebkitBackdropFilter: 'blur(16px)',
+                  border: `1px solid ${cardBorder}`,
+                  borderRadius: 14,
+                  padding: 28,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 8,
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease, border-color 0.4s ease',
+                }}
+                onMouseEnter={(e) => {
+                  const el = e.currentTarget
+                  el.style.transform = 'translateY(-2px)'
+                  el.style.boxShadow = `0 8px 24px ${shadowColor}`
+                }}
+                onMouseLeave={(e) => {
+                  const el = e.currentTarget
+                  el.style.transform = 'translateY(0)'
+                  el.style.boxShadow = 'none'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+                  <span
+                    className="font-sans"
+                    style={{
+                      fontSize: 11,
+                      letterSpacing: '1.2px',
+                      textTransform: 'uppercase',
+                      color: accent,
+                      fontWeight: 600,
+                    }}
+                  >
+                    {item.period}
+                  </span>
+                  <span
+                    className="font-sans"
+                    style={{
+                      fontSize: 12,
+                      color: gray,
+                      fontWeight: 500,
+                      background: pillBg,
+                      padding: '2px 10px',
+                      borderRadius: 12,
+                      border: `1px solid ${cardBorder}`,
+                    }}
+                  >
+                    {item.role}
+                  </span>
+                </div>
+                <h3
+                  style={{
+                    fontFamily: '"Instrument Serif", Georgia, serif',
+                    fontSize: 22,
+                    fontWeight: 400,
+                    letterSpacing: '-0.4px',
+                    color: ink,
+                    marginTop: 4,
+                  }}
+                >
+                  {item.title}
+                </h3>
+                <p
+                  className="font-sans"
+                  style={{
+                    fontSize: 14,
+                    color: gray,
+                    lineHeight: '22px',
+                    marginTop: 4,
+                  }}
+                >
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Volunteer & Humanitarian Leadership */}
+      {content.volunteerCategories && content.volunteerCategories.length > 0 && (
+        <div>
+          <div style={{ marginBottom: 28 }}>
+            <p
+              className="font-sans"
+              style={{
+                fontSize: 12,
+                letterSpacing: '1.32px',
+                textTransform: 'uppercase',
+                color: gray,
+                fontWeight: 400,
+                marginBottom: 10,
+                transition: 'color 0.4s ease',
+              }}
+            >
+              {content.volunteerHeading || 'VOLUNTEER & HUMANITARIAN LEADERSHIP'}
+            </p>
+            {content.volunteerSubtext && (
+              <p
+                className="font-sans"
+                style={{
+                  fontSize: 15,
+                  color: gray,
+                  lineHeight: '24px',
+                  maxWidth: 820,
+                }}
+              >
+                {content.volunteerSubtext}
+              </p>
+            )}
+          </div>
+
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: 20,
+            }}
+          >
+            {content.volunteerCategories.map((cat, i) => (
+              <div
+                key={i}
+                className="volunteer-card"
+                style={{
+                  background: cardBg,
+                  backdropFilter: 'blur(16px)',
+                  WebkitBackdropFilter: 'blur(16px)',
+                  border: `1px solid ${cardBorder}`,
+                  borderRadius: 16,
+                  padding: '28px 32px',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease, background 0.4s ease, border-color 0.4s ease',
+                }}
+                onMouseEnter={(e) => {
+                  const el = e.currentTarget
+                  el.style.transform = 'translateY(-2px)'
+                  el.style.boxShadow = `0 8px 24px ${shadowColor}`
+                }}
+                onMouseLeave={(e) => {
+                  const el = e.currentTarget
+                  el.style.transform = 'translateY(0)'
+                  el.style.boxShadow = 'none'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
+                  <span
+                    style={{
+                      display: 'inline-block',
+                      width: 8,
+                      height: 8,
+                      borderRadius: '50%',
+                      background: accent,
+                      flexShrink: 0,
+                    }}
+                  />
+                  <h3
+                    style={{
+                      fontFamily: '"Instrument Serif", Georgia, serif',
+                      fontSize: 22,
+                      fontWeight: 400,
+                      letterSpacing: '-0.3px',
+                      color: ink,
+                    }}
+                  >
+                    {cat.category}
+                  </h3>
+                </div>
+
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 10 }}>
+                  {cat.items.map((item, j) => (
+                    <li
+                      key={j}
+                      className="font-sans"
+                      style={{
+                        fontSize: 14,
+                        color: gray,
+                        lineHeight: '24px',
+                        display: 'flex',
+                        alignItems: 'flex-start',
+                        gap: 12,
+                      }}
+                    >
+                      <span
+                        style={{
+                          color: accent,
+                          fontSize: 14,
+                          lineHeight: '24px',
+                          userSelect: 'none',
+                        }}
+                      >
+                        —
+                      </span>
+                      <span style={{ flex: 1 }}>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </section>
   )
 }

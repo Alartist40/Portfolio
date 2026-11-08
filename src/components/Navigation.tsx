@@ -125,6 +125,37 @@ export default function Navigation({ lang, onToggleLang, theme, onToggleTheme }:
             {theme === 'light' ? '☾' : '☀'}
           </button>
 
+          {/* PDF Download */}
+          <a
+            href={lang === 'jp' ? './Romero_Alejandro_Portfolio_JP.pdf' : './Romero_Alejandro_Portfolio.pdf'}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Download PDF Portfolio"
+            className="font-sans transition-colors duration-300"
+            style={{
+              fontSize: 12,
+              letterSpacing: '1.32px',
+              textTransform: 'uppercase' as const,
+              color: grayColor,
+              fontWeight: 500,
+              textDecoration: 'none',
+              padding: '2px 8px',
+              borderRadius: 4,
+              border: '1px solid var(--card-border)',
+              transition: 'color 0.3s ease, border-color 0.3s ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = 'var(--accent)'
+              e.currentTarget.style.borderColor = 'var(--accent)'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = grayColor
+              e.currentTarget.style.borderColor = 'var(--card-border)'
+            }}
+          >
+            PDF ↗
+          </a>
+
           {/* Lang toggle */}
           <button
             onClick={onToggleLang}
@@ -198,7 +229,23 @@ export default function Navigation({ lang, onToggleLang, theme, onToggleTheme }:
                 {lang === 'en' ? item.en : item.jp}
               </button>
             ))}
-            <div className="flex items-center" style={{ gap: 24, marginTop: 8 }}>
+            <div className="flex items-center flex-wrap" style={{ gap: 20, marginTop: 8 }}>
+              <a
+                href={lang === 'jp' ? './Romero_Alejandro_Portfolio_JP.pdf' : './Romero_Alejandro_Portfolio.pdf'}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-sans"
+                style={{
+                  fontSize: 13,
+                  letterSpacing: '1.2px',
+                  textTransform: 'uppercase' as const,
+                  color: 'var(--accent)',
+                  fontWeight: 500,
+                  textDecoration: 'none',
+                }}
+              >
+                PDF ↗
+              </a>
               <button
                 onClick={onToggleTheme}
                 className="font-sans"
