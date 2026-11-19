@@ -328,7 +328,7 @@
               <h2 style="font-size: 16pt; letter-spacing: -0.4px;">Cynapse</h2>
             </div>
             <p style="font-size: 8.2pt; color: #383530; line-height: 1.35; margin: 0 0 6px 0;">
-              100%純粋なRustで開発された高性能・完全オフライン対応の自律型AIエージェントプラットフォーム。4層Dendrite SQLite FTS5グラフメモリ、Leafcutterテンソル実行コア、3D銀河軌道ビジュアライザ、対話型レトロTUIハーネスを搭載。単体・結合テスト301件合格。
+              100%純粋なRustで開発された高性能・完全オフライン対応の自律型AIエージェント基盤。Orange Pi 6 Plus（ARMv9.2 big.LITTLE固定＋Vulkan GPUオフロードで6.5 tok/s）での実機検証済み。CPU単体でのLoRAファインチューニング＆GGUF量子化（/soup）、4層Dendrite FTS5グラフメモリ、RTK出力圧縮、/sdd・/eval・myelinスキル群、301件のテスト合格を実現。
             </p>
 
             
@@ -349,7 +349,7 @@
             
 
             <div style="margin-top: 4px;">
-              <span class="pill pill-accent">Rust</span><span class="pill pill-accent">AIエージェント</span><span class="pill pill-accent">グラフメモリ</span><span class="pill pill-accent">TUI</span><span class="pill pill-accent">完全オフライン</span>
+              <span class="pill pill-accent">Rust</span><span class="pill pill-accent">AIエージェント</span><span class="pill pill-accent">CPUファインチューニング</span><span class="pill pill-accent">Orange Pi 6+</span><span class="pill pill-accent">完全オフライン</span>
             </div>
           </div>
         
@@ -438,33 +438,31 @@
     </div>
 
     <div class="content-wrap">
-      <div style="margin-bottom: 8px;">
-        <div class="section-eyebrow">主要開発システム 04〜07</div>
-        <p style="font-size: 8pt; color: #55524C; margin: 0;">
-          自律型ロボティクス、LoRaオフグリッド通信、SBC向けBM25検索エンジン、分散学習基盤
+      <div style="margin-bottom: 6px;">
+        <div class="section-eyebrow">主要開発システム 04〜09</div>
+        <p style="font-size: 7.8pt; color: #55524C; margin: 0;">
+          自律型ロボティクス、オフライン知識基盤、トークン最適化スキル群（Myelin）、3D X-Rayビジョンシステム
         </p>
       </div>
 
-      <div class="grid-2" style="gap: 8px;">
+      <div class="grid-2" style="gap: 6px;">
         
-            <div class="card" style="padding: 9px 11px; margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="card" style="padding: 6px 9px; margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
-                  <span class="mono accent" style="font-size: 7.2pt; font-weight: 600;">プロジェクト 04</span>
-                  <span style="font-size: 6.8pt; color: #7A756C;" class="mono">Alartist40/the-pathfinder-eye</span>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px;">
+                  <span class="mono accent" style="font-size: 6.8pt; font-weight: 600;">プロジェクト 04</span>
+                  <span style="font-size: 6.4pt; color: #7A756C;" class="mono">Alartist40/the-pathfinder-eye</span>
                 </div>
-                <h3 style="font-size: 13pt; line-height: 1.15; margin-bottom: 3px;">The Pathfinder Eye</h3>
-                <p style="font-size: 7.8pt; color: #383530; line-height: 1.32; margin: 0 0 6px 0;">
+                <h3 style="font-size: 11.5pt; line-height: 1.12; margin-bottom: 2px;">The Pathfinder Eye</h3>
+                <p style="font-size: 7.2pt; color: #383530; line-height: 1.26; margin: 0 0 4px 0;">
                   ネイティブGo/Rustの頭脳、全方向メカナム移動、顔認識セキュリティ権限管理、Raspberry Pi 5上で30fps動作するリアルタイムYOLOビジョン、マルチモーダルAI推論を搭載した自律型ロボティクスプラットフォーム。
                 </p>
 
                 
-                  <div style="background: #F9F8F5; border: 1px solid #E3DFD5; border-radius: 5px; padding: 5px 8px; margin-bottom: 6px;">
+                  <div style="background: #F9F8F5; border: 1px solid #E3DFD5; border-radius: 4px; padding: 3.5px 7px; margin-bottom: 4px;">
                     <ul class="bullet-list" style="margin: 0;">
                       
-                        <li style="font-size: 7.3pt; line-height: 1.28; margin-bottom: 2px;">ゼロPythonアーキテクチャ: 完全なネイティブGo/RustスタックがPythonのオーバーヘッドを排除し、400MBのRAMと1.2GBのストレージを回収</li>
-                      
-                        <li style="font-size: 7.3pt; line-height: 1.28; margin-bottom: 2px;">Cynapseニューラルリンクメモリ: [[人物]]、[[役割]]、[[イベント]]を双方向バックリンクで接続するグラフベースの知識エンジン</li>
+                        <li style="font-size: 6.9pt; line-height: 1.24; margin-bottom: 1px;">ゼロPythonアーキテクチャ: 完全なネイティブGo/RustスタックがPythonのオーバーヘッドを排除し、400MBのRAMと1.2GBのストレージを回収</li>
                       
                     </ul>
                   </div>
@@ -472,28 +470,26 @@
               </div>
 
               <div>
-                <span class="pill">Rust</span><span class="pill">Go</span><span class="pill">ロボティクス</span><span class="pill">コンピュータビジョン</span><span class="pill">Raspberry Pi 5</span>
+                <span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">Rust</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">Go</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">ロボティクス</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">コンピュータビジョン</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">Raspberry Pi 5</span>
               </div>
             </div>
           
-            <div class="card" style="padding: 9px 11px; margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="card" style="padding: 6px 9px; margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
-                  <span class="mono accent" style="font-size: 7.2pt; font-weight: 600;">プロジェクト 05</span>
-                  <span style="font-size: 6.8pt; color: #7A756C;" class="mono">Alartist40/paraclea.git</span>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px;">
+                  <span class="mono accent" style="font-size: 6.8pt; font-weight: 600;">プロジェクト 05</span>
+                  <span style="font-size: 6.4pt; color: #7A756C;" class="mono">Alartist40/paraclea.git</span>
                 </div>
-                <h3 style="font-size: 13pt; line-height: 1.15; margin-bottom: 3px;">Paraclea</h3>
-                <p style="font-size: 7.8pt; color: #383530; line-height: 1.32; margin: 0 0 6px 0;">
+                <h3 style="font-size: 11.5pt; line-height: 1.12; margin-bottom: 2px;">Paraclea</h3>
+                <p style="font-size: 7.2pt; color: #383530; line-height: 1.26; margin: 0 0 4px 0;">
                   純粋なRustによる完全オフラインAIコンパニオン兼インテリジェント司書エンジン。パーソナライズされたDendrite v2知識グラフメモリ、30言語219版の聖書データベース、211章に及ぶサバイバル・医療・専門ライブラリ、Reticulum LoRaメッシュ通信を統合。
                 </p>
 
                 
-                  <div style="background: #F9F8F5; border: 1px solid #E3DFD5; border-radius: 5px; padding: 5px 8px; margin-bottom: 6px;">
+                  <div style="background: #F9F8F5; border: 1px solid #E3DFD5; border-radius: 4px; padding: 3.5px 7px; margin-bottom: 4px;">
                     <ul class="bullet-list" style="margin: 0;">
                       
-                        <li style="font-size: 7.3pt; line-height: 1.28; margin-bottom: 2px;">純粋Rust製AIコンパニオン＆司書アーキテクチャ: 完全な純粋Rustにより構築され、超高速なオフライン文書検索、多言語訳対比、インテリジェント想起を実現</li>
-                      
-                        <li style="font-size: 7.3pt; line-height: 1.28; margin-bottom: 2px;">パーソナライズ型AI司書 ＆ SOULシステム: 小型かつ適応力の高いローカルAIが専属司書として機能。SOUL.mdやIDENTITYにより性格や対話スタイルを自由にカスタマイズ可能</li>
+                        <li style="font-size: 6.9pt; line-height: 1.24; margin-bottom: 1px;">純粋Rust製AIコンパニオン＆司書アーキテクチャ: 完全な純粋Rustにより構築され、超高速なオフライン文書検索、多言語訳対比、インテリジェント想起を実現</li>
                       
                     </ul>
                   </div>
@@ -501,28 +497,26 @@
               </div>
 
               <div>
-                <span class="pill">Rust</span><span class="pill">AI司書</span><span class="pill">知識エンジン</span><span class="pill">Reticulumメッシュ</span>
+                <span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">Rust</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">AI司書</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">知識エンジン</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">Reticulumメッシュ</span>
               </div>
             </div>
           
-            <div class="card" style="padding: 9px 11px; margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="card" style="padding: 6px 9px; margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
-                  <span class="mono accent" style="font-size: 7.2pt; font-weight: 600;">プロジェクト 06</span>
-                  <span style="font-size: 6.8pt; color: #7A756C;" class="mono">Alartist40/mazzaroth</span>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px;">
+                  <span class="mono accent" style="font-size: 6.8pt; font-weight: 600;">プロジェクト 06</span>
+                  <span style="font-size: 6.4pt; color: #7A756C;" class="mono">Alartist40/mazzaroth</span>
                 </div>
-                <h3 style="font-size: 13pt; line-height: 1.15; margin-bottom: 3px;">Mazzaroth</h3>
-                <p style="font-size: 7.8pt; color: #383530; line-height: 1.32; margin: 0 0 6px 0;">
-                  シングルボードコンピュータ向けに純粋Rustで開発された完全オフライン知識金庫＆研究エンジン。サブミリ秒のBM25全文検索、オフラインベクトル探索、62カ国の地政学オフライン地図、1,105ノードの対話型3D知識グラフを内包。
+                <h3 style="font-size: 11.5pt; line-height: 1.12; margin-bottom: 2px;">Mazzaroth</h3>
+                <p style="font-size: 7.2pt; color: #383530; line-height: 1.26; margin: 0 0 4px 0;">
+                  SBC向けに純粋Rustで開発された完全オフライン知識金庫＆研究エンジン。役割別マイクロエージェント群（自動履歴圧縮・ノート保存・クルー知識・チェックリスト）、刷新されたNatural Earth六角形世界データマップ（帝国・宗教・サバイバル・歴史的疫病レイヤー）、日本語トライグラムFTS5、1,105ノード3Dグラフを搭載。
                 </p>
 
                 
-                  <div style="background: #F9F8F5; border: 1px solid #E3DFD5; border-radius: 5px; padding: 5px 8px; margin-bottom: 6px;">
+                  <div style="background: #F9F8F5; border: 1px solid #E3DFD5; border-radius: 4px; padding: 3.5px 7px; margin-bottom: 4px;">
                     <ul class="bullet-list" style="margin: 0;">
                       
-                        <li style="font-size: 7.3pt; line-height: 1.28; margin-bottom: 2px;">100%純粋Rust製マルチエンジン保管庫: シングルボードコンピュータ（Raspberry Pi、Orange Pi等）向けに極限まで最適化された、外部依存ゼロの単一静的バイナリ</li>
-                      
-                        <li style="font-size: 7.3pt; line-height: 1.28; margin-bottom: 2px;">サブミリ秒BM25検索エンジン: ネットワーク接続なしで数千の歴史・医療・サバイバル原典ドキュメントを横断する転置インデックスとBM25語彙スコアリング</li>
+                        <li style="font-size: 6.9pt; line-height: 1.24; margin-bottom: 1px;">100%純粋Rust製マルチエンジン保管庫: シングルボードコンピュータ（Raspberry Pi、Orange Pi等）向けに極限まで最適化された、外部依存ゼロの単一静的バイナリ</li>
                       
                     </ul>
                   </div>
@@ -530,28 +524,26 @@
               </div>
 
               <div>
-                <span class="pill">Rust</span><span class="pill">オフライン知識金庫</span><span class="pill">BM25検索</span><span class="pill">3Dグラフ</span><span class="pill">SBC</span>
+                <span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">Rust</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">マルチエージェント</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">六角形地理マップ</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">BM25検索</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">SBC</span>
               </div>
             </div>
           
-            <div class="card" style="padding: 9px 11px; margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="card" style="padding: 6px 9px; margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
-                  <span class="mono accent" style="font-size: 7.2pt; font-weight: 600;">プロジェクト 07</span>
-                  <span style="font-size: 6.8pt; color: #7A756C;" class="mono">Alartist40/hikarigo</span>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px;">
+                  <span class="mono accent" style="font-size: 6.8pt; font-weight: 600;">プロジェクト 07</span>
+                  <span style="font-size: 6.4pt; color: #7A756C;" class="mono">Alartist40/hikarigo</span>
                 </div>
-                <h3 style="font-size: 13pt; line-height: 1.15; margin-bottom: 3px;">Hikarigo</h3>
-                <p style="font-size: 7.8pt; color: #383530; line-height: 1.32; margin: 0 0 6px 0;">
+                <h3 style="font-size: 11.5pt; line-height: 1.12; margin-bottom: 2px;">Hikarigo</h3>
+                <p style="font-size: 7.2pt; color: #383530; line-height: 1.26; margin: 0 0 4px 0;">
                   Go言語とクリーンなHTML/CSSで構築された、プライバシー最優先のオープンソース言語学習・認知的反復学習プラットフォーム。外部トラッキングゼロ、SM-2間隔反復記憶アルゴリズム、ローカルSQLite永続化により10ms未満の応答速度を実現。
                 </p>
 
                 
-                  <div style="background: #F9F8F5; border: 1px solid #E3DFD5; border-radius: 5px; padding: 5px 8px; margin-bottom: 6px;">
+                  <div style="background: #F9F8F5; border: 1px solid #E3DFD5; border-radius: 4px; padding: 3.5px 7px; margin-bottom: 4px;">
                     <ul class="bullet-list" style="margin: 0;">
                       
-                        <li style="font-size: 7.3pt; line-height: 1.28; margin-bottom: 2px;">クリーンなGoマイクロサービスアーキテクチャ: 高並行処理に優れたGo言語で記述され、外部サーバー依存ゼロの極小単一実行可能バイナリにコンパイル</li>
-                      
-                        <li style="font-size: 7.3pt; line-height: 1.28; margin-bottom: 2px;">プライバシー最優先のローカルストレージ: トラッキングやアナリティクスを一切排除し、端末内のローカルSQLiteに学習履歴と分散反復データを完全保存</li>
+                        <li style="font-size: 6.9pt; line-height: 1.24; margin-bottom: 1px;">クリーンなGoマイクロサービスアーキテクチャ: 高並行処理に優れたGo言語で記述され、外部サーバー依存ゼロの極小単一実行可能バイナリにコンパイル</li>
                       
                     </ul>
                   </div>
@@ -559,7 +551,61 @@
               </div>
 
               <div>
-                <span class="pill">Go</span><span class="pill">プライバシー最優先</span><span class="pill">学習プラットフォーム</span><span class="pill">分散学習</span><span class="pill">SQLite</span>
+                <span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">Go</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">プライバシー最優先</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">学習プラットフォーム</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">分散学習</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">SQLite</span>
+              </div>
+            </div>
+          
+            <div class="card" style="padding: 6px 9px; margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px;">
+                  <span class="mono accent" style="font-size: 6.8pt; font-weight: 600;">プロジェクト 08</span>
+                  <span style="font-size: 6.4pt; color: #7A756C;" class="mono">Alartist40</span>
+                </div>
+                <h3 style="font-size: 11.5pt; line-height: 1.12; margin-bottom: 2px;">Myelin</h3>
+                <p style="font-size: 7.2pt; color: #383530; line-height: 1.26; margin: 0 0 4px 0;">
+                  純粋なRust標準ライブラリのみでコンパイルされたモジュール式・トークン最適化AIエージェントスキル群（Cargo/Python依存ゼロ）。graph-index・rtk-squish・skill-scanバイナリと動的プログレッシブ・ディスクロージャー・ルーターにより、6つの専門スキルをオンデマンド起動しトークン浪費とAIスロップを排除。
+                </p>
+
+                
+                  <div style="background: #F9F8F5; border: 1px solid #E3DFD5; border-radius: 4px; padding: 3.5px 7px; margin-bottom: 4px;">
+                    <ul class="bullet-list" style="margin: 0;">
+                      
+                        <li style="font-size: 6.9pt; line-height: 1.24; margin-bottom: 1px;">ゼロ依存の純粋Rust標準ライブラリツール群: CargoもPythonも使わずrustcのみで3つの静的バイナリ（graph-index、rtk-squish、skill-scan）をコンパイル</li>
+                      
+                    </ul>
+                  </div>
+                
+              </div>
+
+              <div>
+                <span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">Rust標準ライブラリ</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">エージェントスキル</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">トークン最適化</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">グラフ索引</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">セキュリティ</span>
+              </div>
+            </div>
+          
+            <div class="card" style="padding: 6px 9px; margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px;">
+                  <span class="mono accent" style="font-size: 6.8pt; font-weight: 600;">プロジェクト 09</span>
+                  <span style="font-size: 6.4pt; color: #7A756C;" class="mono">Alartist40</span>
+                </div>
+                <h3 style="font-size: 11.5pt; line-height: 1.12; margin-bottom: 2px;">Vision</h3>
+                <p style="font-size: 7.2pt; color: #383530; line-height: 1.26; margin: 0 0 4px 0;">
+                  WASM・Three.js・MediaPipeモデルを完全ローカル内蔵した100%オフライン・エアギャップ対応3D解剖学・診断ビジョンプラットフォーム。没入型X-Rayミラーモード、多断面デプススライサー、サーマルストレスシェーダー、顔面rPPG心拍計測、3D空間音響ソニフィケーションを搭載。
+                </p>
+
+                
+                  <div style="background: #F9F8F5; border: 1px solid #E3DFD5; border-radius: 4px; padding: 3.5px 7px; margin-bottom: 4px;">
+                    <ul class="bullet-list" style="margin: 0;">
+                      
+                        <li style="font-size: 6.9pt; line-height: 1.24; margin-bottom: 1px;">100%オフライン・エアギャップ構成: すべてのJS、WASM、MediaPipe顔/手ランドマークモデル、Three.jsローダー、フォントをローカル同梱し外部通信ゼロで稼働</li>
+                      
+                    </ul>
+                  </div>
+                
+              </div>
+
+              <div>
+                <span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">3Dビジョン</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">X-Rayモード</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">MediaPipe</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">Three.js</span><span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">エアギャップ</span>
               </div>
             </div>
           

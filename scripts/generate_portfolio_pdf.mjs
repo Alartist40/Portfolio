@@ -355,33 +355,33 @@ function renderHtml(lang) {
     </div>
 
     <div class="content-wrap">
-      <div style="margin-bottom: 8px;">
-        <div class="section-eyebrow">${isJp ? '主要開発システム 04〜07' : 'FLAGSHIP SYSTEMS 04 — 07'}</div>
-        <p style="font-size: 8pt; color: #55524C; margin: 0;">
-          ${isJp ? '自律型ロボティクス、LoRaオフグリッド通信、SBC向けBM25検索エンジン、分散学習基盤' : 'Autonomous robotics, LoRa off-grid mesh, SBC full-text search, and local-first spaced repetition.'}
+      <div style="margin-bottom: 6px;">
+        <div class="section-eyebrow">${isJp ? '主要開発システム 04〜09' : 'FLAGSHIP SYSTEMS 04 — 09'}</div>
+        <p style="font-size: 7.8pt; color: #55524C; margin: 0;">
+          ${isJp ? '自律型ロボティクス、オフライン知識基盤、トークン最適化スキル群（Myelin）、3D X-Rayビジョンシステム' : 'Autonomous robotics, offline knowledge vaults, pure-Rust agent skill suite (Myelin), and air-gapped 3D X-Ray vision.'}
         </p>
       </div>
 
-      <div class="grid-2" style="gap: 8px;">
+      <div class="grid-2" style="gap: 6px;">
         ${pGroup2.map(p => {
           const d = projectDetails[p.slug]?.[lang]
           return `
-            <div class="card" style="padding: 9px 11px; margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="card" style="padding: 6px 9px; margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px;">
-                  <span class="mono accent" style="font-size: 7.2pt; font-weight: 600;">${escapeHtml(p.num)}</span>
-                  <span style="font-size: 6.8pt; color: #7A756C;" class="mono">${escapeHtml(d?.githubUrl ? d.githubUrl.replace('https://github.com/', '') : '')}</span>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px;">
+                  <span class="mono accent" style="font-size: 6.8pt; font-weight: 600;">${escapeHtml(p.num)}</span>
+                  <span style="font-size: 6.4pt; color: #7A756C;" class="mono">${escapeHtml(d?.githubUrl ? d.githubUrl.replace('https://github.com/', '') : '')}</span>
                 </div>
-                <h3 style="font-size: 13pt; line-height: 1.15; margin-bottom: 3px;">${escapeHtml(p.title)}</h3>
-                <p style="font-size: 7.8pt; color: #383530; line-height: 1.32; margin: 0 0 6px 0;">
+                <h3 style="font-size: 11.5pt; line-height: 1.12; margin-bottom: 2px;">${escapeHtml(p.title)}</h3>
+                <p style="font-size: 7.2pt; color: #383530; line-height: 1.26; margin: 0 0 4px 0;">
                   ${escapeHtml(p.description)}
                 </p>
 
                 ${d && d.architecture && d.architecture.length > 0 ? `
-                  <div style="background: #F9F8F5; border: 1px solid #E3DFD5; border-radius: 5px; padding: 5px 8px; margin-bottom: 6px;">
+                  <div style="background: #F9F8F5; border: 1px solid #E3DFD5; border-radius: 4px; padding: 3.5px 7px; margin-bottom: 4px;">
                     <ul class="bullet-list" style="margin: 0;">
-                      ${d.architecture.slice(0, 2).map(arch => `
-                        <li style="font-size: 7.3pt; line-height: 1.28; margin-bottom: 2px;">${escapeHtml(arch)}</li>
+                      ${d.architecture.slice(0, 1).map(arch => `
+                        <li style="font-size: 6.9pt; line-height: 1.24; margin-bottom: 1px;">${escapeHtml(arch)}</li>
                       `).join('')}
                     </ul>
                   </div>
@@ -389,7 +389,7 @@ function renderHtml(lang) {
               </div>
 
               <div>
-                ${p.tags.map(t => `<span class="pill">${escapeHtml(t)}</span>`).join('')}
+                ${p.tags.map(t => `<span class="pill" style="font-size: 6.3pt; padding: 1px 5px;">${escapeHtml(t)}</span>`).join('')}
               </div>
             </div>
           `

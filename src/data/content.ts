@@ -49,8 +49,8 @@ export const content = {
           title: 'Cynapse',
           slug: 'cynapse',
           description:
-            'High-performance, offline-first AI agent platform engineered in 100% pure Rust. Features the 4-tier Dendrite SQLite FTS5 graph memory, Leafcutter tensor execution core, 3D orbital galaxy visualization, and an interactive retro TUI harness. 301 verified tests passing.',
-          tags: ['Rust', 'AI Agent', 'Graph Memory', 'TUI', 'Offline-First'],
+            'High-performance, offline-first AI agent platform engineered in 100% pure Rust. Verified on Orange Pi 6 Plus (ARMv9.2 big.LITTLE + Vulkan GPU offload at 6.5 tok/s), featuring CPU LoRA fine-tuning & GGUF quantization (/soup), 4-tier Dendrite FTS5 graph memory, RTK output filtering, /sdd & /eval harnesses, and 301 verified tests.',
+          tags: ['Rust', 'AI Agent', 'CPU Fine-Tuning', 'Orange Pi 6+', 'Offline-First'],
         },
         {
           num: 'PROJECT 02',
@@ -89,8 +89,8 @@ export const content = {
           title: 'Mazzaroth',
           slug: 'mazzaroth',
           description:
-            'Pure Rust offline digital knowledge vault and source-verified research engine for single-board computers. Delivers sub-millisecond BM25 full-text indexing, offline vector search, 62 countries of geopolitical maps, and an interactive 1,105-node 3D knowledge graph.',
-          tags: ['Rust', 'Offline Knowledge Vault', 'BM25 Search', '3D Graph', 'SBC'],
+            'Pure Rust offline digital knowledge vault and research engine for SBCs. Features specialized tiny role-based agents (crew facts, pinned docs, checklist & auto-compact history), an overhauled Natural Earth hexagon world data-map (empires, religions, survival & historical plagues), Japanese trigram FTS5, and a 1,105-node 3D graph.',
+          tags: ['Rust', 'Multi-Agent', 'Hexagon Geo-Map', 'BM25 Search', 'SBC'],
         },
         {
           num: 'PROJECT 07',
@@ -99,6 +99,22 @@ export const content = {
           description:
             'Privacy-first, open-source language learning and cognitive study platform built in Go and clean HTML/CSS. Delivers zero-tracking SM-2 spaced repetition, instant vocabulary recall, and local-first data ownership with sub-10ms response times.',
           tags: ['Go', 'Privacy-First', 'Educational Platform', 'Spaced Repetition', 'SQLite'],
+        },
+        {
+          num: 'PROJECT 08',
+          title: 'Myelin',
+          slug: 'myelin',
+          description:
+            'Modular, token-optimized AI agent skill suite compiled from pure stdlib Rust (zero Cargo/Python deps). Pairs compiled graph-index, rtk-squish, and skill-scan binaries with a progressive-disclosure router that lazy-loads 6 specialized modules (anti-slop, token compression, spec-kit, UI craft, cybersecurity, harness gates).',
+          tags: ['Rust Stdlib', 'Agent Skills', 'Token Optimization', 'Graph Index', 'AppSec'],
+        },
+        {
+          num: 'PROJECT 09',
+          title: 'Vision',
+          slug: 'vision',
+          description:
+            '100% offline air-gapped 3D anatomical & diagnostic vision platform with vendored WASM, Three.js, and MediaPipe neural models. Features an immersive live X-Ray Mirror mode, multi-planar depth slicer, thermal stress shader, facial rPPG heart rate vitals, and 3D spatial audio sonification.',
+          tags: ['3D Vision', 'X-Ray Mode', 'MediaPipe', 'Three.js', 'Air-Gapped'],
         },
       ],
     },
@@ -284,8 +300,8 @@ export const content = {
           title: 'Cynapse',
           slug: 'cynapse',
           description:
-            '100%純粋なRustで開発された高性能・完全オフライン対応の自律型AIエージェントプラットフォーム。4層Dendrite SQLite FTS5グラフメモリ、Leafcutterテンソル実行コア、3D銀河軌道ビジュアライザ、対話型レトロTUIハーネスを搭載。単体・結合テスト301件合格。',
-          tags: ['Rust', 'AIエージェント', 'グラフメモリ', 'TUI', '完全オフライン'],
+            '100%純粋なRustで開発された高性能・完全オフライン対応の自律型AIエージェント基盤。Orange Pi 6 Plus（ARMv9.2 big.LITTLE固定＋Vulkan GPUオフロードで6.5 tok/s）での実機検証済み。CPU単体でのLoRAファインチューニング＆GGUF量子化（/soup）、4層Dendrite FTS5グラフメモリ、RTK出力圧縮、/sdd・/eval・myelinスキル群、301件のテスト合格を実現。',
+          tags: ['Rust', 'AIエージェント', 'CPUファインチューニング', 'Orange Pi 6+', '完全オフライン'],
         },
         {
           num: 'プロジェクト 02',
@@ -324,8 +340,8 @@ export const content = {
           title: 'Mazzaroth',
           slug: 'mazzaroth',
           description:
-            'シングルボードコンピュータ向けに純粋Rustで開発された完全オフライン知識金庫＆研究エンジン。サブミリ秒のBM25全文検索、オフラインベクトル探索、62カ国の地政学オフライン地図、1,105ノードの対話型3D知識グラフを内包。',
-          tags: ['Rust', 'オフライン知識金庫', 'BM25検索', '3Dグラフ', 'SBC'],
+            'SBC向けに純粋Rustで開発された完全オフライン知識金庫＆研究エンジン。役割別マイクロエージェント群（自動履歴圧縮・ノート保存・クルー知識・チェックリスト）、刷新されたNatural Earth六角形世界データマップ（帝国・宗教・サバイバル・歴史的疫病レイヤー）、日本語トライグラムFTS5、1,105ノード3Dグラフを搭載。',
+          tags: ['Rust', 'マルチエージェント', '六角形地理マップ', 'BM25検索', 'SBC'],
         },
         {
           num: 'プロジェクト 07',
@@ -334,6 +350,22 @@ export const content = {
           description:
             'Go言語とクリーンなHTML/CSSで構築された、プライバシー最優先のオープンソース言語学習・認知的反復学習プラットフォーム。外部トラッキングゼロ、SM-2間隔反復記憶アルゴリズム、ローカルSQLite永続化により10ms未満の応答速度を実現。',
           tags: ['Go', 'プライバシー最優先', '学習プラットフォーム', '分散学習', 'SQLite'],
+        },
+        {
+          num: 'プロジェクト 08',
+          title: 'Myelin',
+          slug: 'myelin',
+          description:
+            '純粋なRust標準ライブラリのみでコンパイルされたモジュール式・トークン最適化AIエージェントスキル群（Cargo/Python依存ゼロ）。graph-index・rtk-squish・skill-scanバイナリと動的プログレッシブ・ディスクロージャー・ルーターにより、6つの専門スキルをオンデマンド起動しトークン浪費とAIスロップを排除。',
+          tags: ['Rust標準ライブラリ', 'エージェントスキル', 'トークン最適化', 'グラフ索引', 'セキュリティ'],
+        },
+        {
+          num: 'プロジェクト 09',
+          title: 'Vision',
+          slug: 'vision',
+          description:
+            'WASM・Three.js・MediaPipeモデルを完全ローカル内蔵した100%オフライン・エアギャップ対応3D解剖学・診断ビジョンプラットフォーム。没入型X-Rayミラーモード、多断面デプススライサー、サーマルストレスシェーダー、顔面rPPG心拍計測、3D空間音響ソニフィケーションを搭載。',
+          tags: ['3Dビジョン', 'X-Rayモード', 'MediaPipe', 'Three.js', 'エアギャップ'],
         },
       ],
     },
@@ -504,6 +536,8 @@ export const projectDetails: Record<string, Record<Language, ProjectDetail>> = {
         'GBNF Grammar Engine & Autonomous Tooling: Strict grammar-constrained JSON output parsing for deterministic tool calling and multi-step autonomous agent loops',
         'Persona & SOUL Configuration Engine: Dynamic personality injection supporting IDENTITY, SOUL.md, and custom persona prompts for bespoke interaction styles',
         'Self-Healing Doctor Subsystem: Built-in hardware diagnostics (cynapse doctor --fix) verifying SIMD availability, database integrity, and storage health across 13 core subsystems',
+        'Orange Pi 6 Plus & CPU Training/Quantization: Verified on ARMv9.2 big.LITTLE (6.5 tok/s via Cortex-A720 pinning, multi-row sdot kernels, and Vulkan /dev/dri GPU offload), with CPU-only Rank-16/32 LoRA fine-tuning (/soup) and native GGUF quantization',
+        'Expanded Agent Skill Suite: Integrated RTK output compression filter, /sdd Spec-Driven Development, sequential /eval, expert_stream, CyberRescue AI (/security), and myelin/rea/pstack skills',
         'Comprehensive Test Suite: 301 verified pure-Rust unit and integration tests passing with 0 failures',
       ],
       stack: [
@@ -550,6 +584,8 @@ export const projectDetails: Record<string, Record<Language, ProjectDetail>> = {
         'GBNF文法制約エンジン ＆ 自律型ツール実行: 厳密なGBNF文法パーサーによりJSONを確定的に解析し、多段階の自律ツール呼び出しループを実行',
         'ペルソナ ＆ SOUL設定エンジン: IDENTITY、SOUL.md、カスタムペルソナファイルを動的に注入し、ユーザーの好みに合わせた対話スタイルを実現',
         '自己修復型Doctorサブシステム: ハードウェア診断（cynapse doctor --fix）によりSIMD命令、DB整合性、ストレージヘルスを13のサブシステムにわたって自動検証・修復',
+        'Orange Pi 6 Plus 実機検証 ＆ CPU学習・量子化: ARMv9.2 big.LITTLEコア固定・sdotカーネル・Vulkan GPUオフロードにより6.5 tok/sを達成。GPU不要のCPU単体LoRAファインチューニング（/soup）＆GGUF量子化を実装',
+        '拡張スキル＆ハーネス群: RTK出力圧縮フィルタ、/sdd仕様駆動開発、逐次/eval、expert_stream、CyberRescue AI（/security）、myelin/rea/pstackスキルを統合',
         '厳密な品質保証: 301件の純粋Rust単体・結合テスト全件合格（失敗0件）',
       ],
       stack: [
@@ -933,7 +969,8 @@ export const projectDetails: Record<string, Record<Language, ProjectDetail>> = {
         'Sub-Millisecond BM25 Retrieval Engine: Inverted index and lexical scoring running over thousands of historical, medical, and survival source documents without network access',
         '1,105-Node Interactive 3D Knowledge Graph: Spatial rendering of cross-disciplinary concepts, historical events, and references with dynamic orbit controls',
         'Source-Verified Citation Pipeline: Built-in document integrity verification ensuring all retrieved excerpts map back to verified primary texts',
-        'Geopolitical & Offline Cartography: Pre-packaged offline map and regional demographic datasets spanning 62 nations for field research in air-gapped environments',
+        'Geopolitical & Overhauled Hexagon World Map: Pre-packaged Natural Earth hexagon grid (hex_layers.js) with historical empires, religions, scripture, survival, and historical plagues & epidemics layers',
+        'Role-Specialized Tiny Agents & SBC-Lite Mode: Lightweight specialized crew agents with auto-compacting history, saved notes, crew facts, document pinning, checklist mode, and Japanese trigram FTS5',
         'Lightweight Memory Footprint: Runs comfortably within 256MB of RAM while indexing extensive multi-gigabyte text repositories',
       ],
       stack: [
@@ -968,7 +1005,8 @@ export const projectDetails: Record<string, Record<Language, ProjectDetail>> = {
         'サブミリ秒BM25検索エンジン: ネットワーク接続なしで数千の歴史・医療・サバイバル原典ドキュメントを横断する転置インデックスとBM25語彙スコアリング',
         '1,105ノードの対話型3D知識グラフ: 分野横断の概念、歴史的出来事、相互参照を立体空間上にリアルタイムマッピング',
         '出典完全追跡パイプライン: 検索・引用されたすべての抜粋が一次資料の正確な節や章に紐づく厳格な整合性検証機構',
-        '地政学 ＆ 完全オフライン地図データ: エアギャップ環境での現地調査や活動を支援する62カ国のオフライン地図と地域人口統計データを内蔵',
+        '刷新された六角形世界データマップ: Natural Earthグリッドに基づく対話型ヘックスマップ（hex_layers.js）に、歴史的帝国・宗教・聖典・サバイバル・歴史的疫病レイヤーを統合',
+        '役割特化型マイクロエージェント群 ＆ SBC-Liteモード: 自動会話圧縮、ノート保存、クルー知識共有、文書ピン留め、チェックリスト機能を備えた軽量エージェント群と日本語トライグラムFTS5を実装',
         '超軽量省メモリ設計: 数ギガバイト規模のテキストリポジトリをインデックス化しながら、256MB以下のRAMで安定動作',
       ],
       stack: [
@@ -1066,6 +1104,122 @@ export const projectDetails: Record<string, Record<Language, ProjectDetail>> = {
         'MITオープンソースライセンス',
       ],
       githubUrl: 'https://github.com/Alartist40/hikarigo',
+    },
+  },
+  myelin: {
+    en: {
+      architecture: [
+        'Zero-Dependency Pure Rust Stdlib Tooling: Compiles three standalone binaries (graph-index, rtk-squish, skill-scan) using only rustc with zero Cargo or Python dependencies',
+        'Graph-Based Codebase Mapping (graph-index): Builds and queries compact codebase relationship maps so AI coding agents locate symbols without burning context on blind searches',
+        'Progressive-Disclosure Skill Router: Keeps base context lean by lazy-loading 6 specialized sub-skills only when triggered by the task',
+        'Token Compression & Anti-Slop Enforcement: Integrates rtk-squish, caveman compression, and SlopMonster rules to cut verbose output and keep modules concise (<=100 lines)',
+        'Pre-Test Security & Spec Gates: Combines Spec-Driven Development (spec-kit) with skillspector external skill scanning, grim-prompter threat modeling, and strix OWASP Top 10:2025 checks',
+      ],
+      stack: [
+        { category: 'Compiled Tools', items: 'Pure Rust stdlib (rustc only) — graph_index.rs, rtk_squish.rs, skill_scan.rs' },
+        { category: 'Token & Output', items: 'graphify, rtk, ponytail (<=100-line modules), caveman compression, SlopMonster anti-slop' },
+        { category: 'Engineering & UI', items: 'spec-kit (Specify/Plan/Tasks/Implement), ai-design-skills native-first UI craft' },
+        { category: 'AppSec & Gates', items: 'skillspector intake scanner, grim-prompter, strix (OWASP Top 10:2025), MITRE & NIST mappings' },
+        { category: 'Execution', items: 'unlazy completion gates, 3-tier hierarchy, wave dispatch templates' },
+      ],
+      realWorld: [
+        'Context-Window Preservation in Large Repos: Prevents AI agents from exhausting context budgets during multi-file refactors',
+        'Pre-Install Skill & MCP Auditing: Scans third-party agent skills and MCP definitions before granting execution access',
+        'Consistent Production Code Quality: Enforces spec-first planning, compact modules, and zero-slop documentation across coding harnesses',
+      ],
+      features: [
+        'Pure stdlib Rust binaries (graph-index, rtk-squish, skill-scan) built via ./build.sh',
+        'Progressive-disclosure SKILL.md router with 6 on-demand modules',
+        'Automated codebase graph indexing and symbol mapping',
+        'Token-squishing output filter and anti-slop prose/UI rules',
+        'Built-in external skill security scanner and OWASP Top 10:2025 review gates',
+      ],
+      githubUrl: 'https://github.com/Alartist40',
+    },
+    jp: {
+      architecture: [
+        'ゼロ依存の純粋Rust標準ライブラリツール群: CargoもPythonも使わずrustcのみで3つの静的バイナリ（graph-index、rtk-squish、skill-scan）をコンパイル',
+        'グラフベース・コードベース地図化（graph-index）: コード構造と依存関係のインデックスを構築し、AIエージェントが迷わず最小トークンで目的箇所を特定可能に設計',
+        'プログレッシブ・ディスクロージャー型ルーター: 6つの専門スキルモジュールを必要時のみ遅延ロードし、モデルのコンテキスト消費を極小化',
+        'トークン圧縮 ＆ 反スロップ規約: rtk-squish、caveman圧縮、SlopMonsterルールにより冗長な出力とAI特有の「スロップ」を排除',
+        'テスト前セキュリティ ＆ 仕様駆動ゲート: spec-kitによる4段階開発に加え、skillspector外部スキル検査・脅威モデリング・OWASP Top 10:2025レビューを統合',
+      ],
+      stack: [
+        { category: 'コンパイルツール', items: '純粋Rust標準ライブラリ（rustcのみ）— graph_index.rs, rtk_squish.rs, skill_scan.rs' },
+        { category: 'トークン最適化', items: 'graphify, rtk, ponytail（100行以下規約）, caveman圧縮, SlopMonster' },
+        { category: '開発 ＆ UI設計', items: 'spec-kit（仕様駆動4段階）, ai-design-skills' },
+        { category: 'セキュリティ', items: 'skillspector検査, grim-prompter脅威分析, strix（OWASP Top 10:2025）, MITRE/NIST対応' },
+        { category: 'ハーネス制御', items: 'unlazy完了ゲート、3層エージェント階層、Waveディスパッチテンプレート' },
+      ],
+      realWorld: [
+        '大規模リポジトリでのコンテキスト節約: 複数ファイル改修時のトークン浪費と迷走を大幅に削減',
+        '外部スキル・MCP導入前の自動監査: サードパーティ製スキルやMCPを安全なスキャン後に導入',
+        '均一なコード品質維持: 仕様先行計画と簡潔なモジュール設計をハーネス全体で強制',
+      ],
+      features: [
+        'rustcのみでビルド可能な静的バイナリ3種（graph-index / rtk-squish / skill-scan）',
+        '6つの専門スキルをオンデマンド起動する段階的開示ルーター',
+        'コードベース構造のグラフ索引化と高速マッピング',
+        'コマンド出力・応答のトークン圧縮とアンチスロップ制御',
+        '外部スキル静的スキャンとOWASP Top 10:2025セキュリティゲート',
+      ],
+      githubUrl: 'https://github.com/Alartist40',
+    },
+  },
+  vision: {
+    en: {
+      architecture: [
+        '100% Offline Air-Gapped Bundle: All JavaScript, WASM runtimes, MediaPipe face/hand landmarker neural models, Three.js loaders, and fonts vendored locally with zero CDN calls',
+        'Immersive X-Ray Mirror Mode (xray.html): Real-time webcam hand & face tracking driving a live holographic skeletal/anatomical X-Ray overlay with procedural spatial audio',
+        'Thermal Stress Shader & Depth Slicer: Interactive multi-planar cross-section slicer and thermal pressure overlay for anatomical and engineering inspection',
+        'Contactless rPPG Heart Rate Vitals: Extracts real-time physiological pulse telemetry from facial landmarks alongside exportable holographic medical dossiers',
+      ],
+      stack: [
+        { category: '3D & Shaders', items: 'Three.js (GLTF/STL loaders), custom thermal stress & X-Ray occlusion shaders' },
+        { category: 'Vision & Neural', items: 'MediaPipe Tasks Vision (WASM, hand_landmarker.task, face_landmarker.task)' },
+        { category: 'Telemetry & Audio', items: 'Contactless facial rPPG vitals estimation, Web Audio API 3D spatial sonification' },
+        { category: 'Deployment', items: '100% air-gapped local vendor bundle, zero external network dependencies' },
+      ],
+      realWorld: [
+        'Interactive Medical & STEM Education: Hands-free touchless X-Ray exploration of 3D anatomical structures',
+        'Air-Gapped Clinical & Field Demos: Runs reliably in clinics or classrooms with zero internet connectivity',
+        'Touchless CAD & Sterile Inspection: Gesture-driven 3D cross-section slicing without touching peripherals',
+      ],
+      features: [
+        'Live interactive X-Ray Mirror mode with hand/face tracking',
+        '100% offline air-gapped vendored WASM & neural models',
+        'Multi-planar cross-section depth slicer & thermal stress shader',
+        'Contactless facial rPPG heart rate vitals & 3D spatial audio',
+        'One-click holographic medical dossier PNG export',
+      ],
+      githubUrl: 'https://github.com/Alartist40',
+    },
+    jp: {
+      architecture: [
+        '100%オフライン・エアギャップ構成: すべてのJS、WASM、MediaPipe顔/手ランドマークモデル、Three.jsローダー、フォントをローカル同梱し外部通信ゼロで稼働',
+        '没入型X-Rayミラーモード（xray.html）: Webカメラによるリアルタイム手・顔トラッキングと連動したホログラフィックX線オーバーレイ＆プロシージャル音響',
+        'サーマルストレスシェーダー ＆ 多断面デプススライサー: 解剖モデルや3Dデータの内部構造を直感的に検査できる断面スライス・熱圧力可視化',
+        '非接触rPPG心拍計測 ＆ ドシエ出力: 顔ランドマークからのリアルタイム生体バイタル推定とホログラフィック診断書PNGエクスポート機能',
+      ],
+      stack: [
+        { category: '3D ＆ シェーダー', items: 'Three.js（GLTF/STLローダー）、サーマルストレス・X-Ray深度遮蔽シェーダー' },
+        { category: 'ビジョン推論', items: 'MediaPipe Tasks Vision（WASM、hand_landmarker / face_landmarkerローカル実行）' },
+        { category: '生体計測 ＆ 音響', items: '非接触顔面rPPG心拍推定、Web Audio API 3D空間ソニフィケーション' },
+        { category: 'デプロイ', items: '外部CDN依存ゼロの完全ローカルベンダー構成（エアギャップ環境対応）' },
+      ],
+      realWorld: [
+        '没入型医療・STEM教育: タッチレス操作で3D人体構造をX線透視しながら直感的に学習',
+        'オフライン医療・現場デモ: インターネット接続のない診療所や教室でも確実に動作',
+        '非接触3D検査インターフェース: ジェスチャー操作による衛生的な3D断面スライス表示',
+      ],
+      features: [
+        '手・顔トラッキング連動のライブX-Rayミラーモード',
+        'WASM・ニューラルモデル完全ローカル同梱のエアギャップ動作',
+        '多断面デプススライサー ＆ サーマルストレス可視化',
+        '非接触rPPG心拍バイタル計測 ＆ 3D空間音響フィードバック',
+        'ホログラフィック診断書PNGワンクリック出力',
+      ],
+      githubUrl: 'https://github.com/Alartist40',
     },
   },
 }
